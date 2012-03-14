@@ -1,9 +1,21 @@
 <html>
 	<head>
-		 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-		 <title>雷钦的博客</title>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		{% if page.title %}
+		<title>{{ page.title }}</title>
+		{% else %}
+		<title>雷钦的博客</title>
+		{% endif %}
 	</head>
 	<body>
-		{{content}}
+		<div>
+			<h1>我自求我道，各自求各道</h1>
+		</div>
+		<div>
+			{% if page.title %}
+			<h1>{{ page.title }}</h1>
+			{% endif %}
+			{{ content }}
+		</div>
 	</body>
 </html>
