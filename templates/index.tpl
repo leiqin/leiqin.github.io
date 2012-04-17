@@ -3,7 +3,7 @@
     <head>
         <link rel="shortcut icon" href="%root_path%images/galaxy-ngc3370.jpg" type="image/jpeg" />
         <link rel="Stylesheet" type="text/css" href="%root_path%%css%" />
-        <title>%title%</title>
+        <title>雷钦的博客</title>
         <meta http-equiv="Content-Type" content="text/html; charset=%encoding%">
     </head>
     <body>
