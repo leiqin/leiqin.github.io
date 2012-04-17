@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <link rel="shortcut icon" href="../../../images/galaxy-ngc3370.jpg" type="image/jpeg" />
+        <link rel="Stylesheet" type="text/css" href="../../../css/default.css" />
+        <title>lightdm 自动登录 -- 雷钦的博客</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    </head>
+    <body>
+        <div id="container">
+            <div id="header">
+                <h1 id="header-title">我自求我道，各自求各道</h1>
+            </div>
+            <div id="content">
+                <h1 class="justcenter">lightdm 自动登录</h1>
+                
+
+<p>
+<a href="http://www.freedesktop.org/wiki/Software/LightDM">lightdm</a> 是一个新兴的，轻量级的 Display Manager 。
+</p>
+
+<p>
+要让它<a href="http://siripong-computer-tips.blogspot.com/2011/09/enable-lightdm-autologin-debian-wheezy.html">自动登录</a>需要修改它的配置文件：/etc/lightdm/lightdm.conf
+</p>
+
+<pre>
+[SeatDefaults]
+autologin-user={YOUR USER NAME}
+pam-service=lightdm-autologin
+</pre>
+
+<p>
+在 SeatDefaults 下修改或添加这两个变量。
+</p>
+
+<p>
+然后：
+</p>
+
+<pre>
+cd /etc/pam.d
+sudo cp lightdm lightdm-autologin
+</pre>
+
+<p>
+将：
+</p>
+
+<pre>
+@include common-auth
+</pre>
+
+<p>
+这一行改成：
+</p>
+
+<pre>
+auth	required	pam_succeed_if.so user != root
+</pre>
+
+<p>
+表示，非 root 用户都可以自动登录。
+</p>
+
+<p>
+这样就可以自动登录了。
+</p>
+
+<p>
+还有一个小问题，其实和 lightdm 没有什么直接关系，如果使用了 gnome-keyring 而又没有使用 gnome 桌面环境，比方说我使用的是 xfce ，<a href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=653011">会有问题</a>：
+</p>
+
+<pre>
+WARNING: gnome-keyring:: couldn't connect to: /tmp/keyring-xxx/pkcs11: 没有那个文件或目录  
+</pre>
+
+<p>
+只需要将 /etc/xdg/autostart/gnome-keyring-*.desktop 中的 @OnlyShowIn=GNOME;Unity;@ 这一行注掉就行了。
+</p>
+
+<pre>
+sed -i.bak 's/^OnlyShowIn/#&amp;/' /etc/xdg/autostart/gnome-keyring-*
+</pre>
+
+            </div>
+        </div>
+    </body>
+</html>
