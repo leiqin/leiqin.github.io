@@ -35,3 +35,5 @@ bc.  auth	required	pam_succeed_if.so user != root
 bc. WARNING: gnome-keyring:: couldn't connect to: /tmp/keyring-xxx/pkcs11: 没有那个文件或目录  
 
 只需要将 /etc/xdg/autostart/gnome-keyring-*.desktop 中的 @OnlyShowIn=GNOME;Unity;@ 这一行注掉就行了。
+
+bc. sed -i.bak 's/^OnlyShowIn/#&/' /etc/xdg/autostart/gnome-keyring-*
