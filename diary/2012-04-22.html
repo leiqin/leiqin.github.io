@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <link rel="shortcut icon" href="../images/galaxy-ngc3370.jpg" type="image/jpeg" />
+        <link rel="Stylesheet" type="text/css" href="../css/default.css" />
+        <title>使用 vimwiki 写博客 -- 雷钦的博客</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    </head>
+    <body>
+        <div id="container">
+            <div id="header">
+                <h1 id="header-title">我自求我道，各自求各道</h1>
+            </div>
+            <div id="content">
+                <h1 class="justcenter">使用 vimwiki 写博客</h1>
+                
+
+<p>
+<a href="http://www.vim.org/scripts/script.php?script_id=2226">vimwiki</a> 是 <a href="http://www.vim.org">Vim</a> 的一个插件，它可以在 Vim 里写 wiki，它还有日记的功能，还可以直接在 Vim 里生成 html。
+</p>
+
+<p>
+普通模式下 <code>\ww</code> 可以进入 wiki 的主页， <code>\w\w</code> 可以写当天的日记，它会在 wiki 的目录下生成一个 diary/yyyy-MM-dd.wiki 的文件，<code>\wi</code> 可以跳转到日记的索引，不过这个索引没什么用，不用管它。我只需要在写博客的时候用<code>\w\w</code> 写当天的日记，然后通过一个脚本根据日记文件的内容生成 wiki 的主页面，也就是 <code>\ww</code> 所在的页面，再生成 html ，把它发布到主机上，或者提交到 <a href="https://github.com/leiqin/leiqin.github.com">github</a> 上就万事大吉。
+</p>
+
+<p>
+这就是我写的脚本：
+</p>
+
+<pre>
+" use vimwiki to blog
+" vim: foldmethod=marker
+
+" load only once {{{
+if exists("g:loaded_vimwiki_blog_auto") || &amp;cp
+    finish
+endif
+let g:loaded_vimwiki_blog_auto = 1
+" }}}
+
+" 根据日记生成 wiki 的主页面
+function! vimwiki#blog#BuildIndex() " {{{
+    let files = s:allDiaryFiles()
+    let list = ['%template index', '']
+    
+    for file in files
+        let info = s:getFileInfo(expand(file))
+        let lines = s:getIndexLines(info)
+        call extend(list, lines)
+        call add(list, '')
+    endfor
+    
+    call s:buildIndex(list)
+endfunction " }}}
+
+" 生成 wiki 的主页面，同时也生成 html
+function! vimwiki#blog#BuildAll() " {{{
+    call vimwiki#blog#BuildIndex()
+    call vimwiki#html#WikiAll2HTML(expand(VimwikiGet('path_html')))
+endfunction " }}}
+
+
+" 获取日记文件，并按时间先后排序，最新的排在前面
+function! s:allDiaryFiles() " {{{
+    let path = expand(VimwikiGet('path'))
+    let files = split(glob(path . VimwikiGet('diary_rel_path') . "[[:digit:]]*" . VimwikiGet('ext')), '\n')
+    call sort(files)
+    call reverse(files)
+    return files
+endfunction " }}}
+
+" 获取日记文件的信息：
+"   date : 日期(文件名) 
+"   title : 标题(文件内前 5 行指定的 title，没有指定的话就是文件名)
+function! s:getFileInfo(path) " {{{
+    let result = {}
+    let result.date = fnamemodify(a:path, ':t:r')
+    let result.title = result.date
+
+    let lines = readfile(a:path, '', 5)
+    for line in lines
+        if line =~ '^%title '
+            let result.title = strpart(line, strlen('%title '))
+            break
+        endif
+    endfor
+
+    return result
+endfunction " }}}
+
+" 根据日记文件的信息生成主页面的行
+function! s:getIndexLines(info) " {{{
+    let result = []
+    call add(result, "== [[" . VimwikiGet('diary_rel_path') . a:info.date . "|" . a:info.title . "]] ==")
+    call add(result, a:info.date)
+    return result
+endfunction " }}}
+
+" 将拼好的列表写入主页面
+function! s:buildIndex(list) " {{{
+    let path = expand(VimwikiGet('path'))
+    let file = path . VimwikiGet('index') . VimwikiGet('ext')
+    call writefile(a:list, file)
+endfunction " }}}
+</pre>
+
+<p>
+把它放到 <code>~/.vim/autoload/vimwiki/blog.vim</code> 。
+</p>
+
+<p>
+然后在 <code>~/.vimrc</code> 中加入两行：
+</p>
+
+<pre>
+nnoremap &lt;Leader&gt;wbi :call vimwiki#blog#BuildIndex()&lt;CR&gt;
+nnoremap &lt;Leader&gt;wba :call vimwiki#blog#BuildAll()&lt;CR&gt;
+</pre>
+
+<p>
+用 <code>\w\w</code> 写完博客，只需要在前五行包含 <code>%title</code> ，就可以使用 <code>\wbi</code> 生成 wiki 的主页面，这时候用 <code>\ww</code> 就可以看到刚才写的文章了，再用 <code>\wba</code> 生成 html 了，发布出去就可以了。
+</p>
+
+            </div>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'leiqin'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+             })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+    </body>
+</html>
