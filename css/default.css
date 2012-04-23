@@ -59,6 +59,13 @@ del {text-decoration: line-through; color: #777777;}
 .done3 {color: #00c000;}
 .done4 {color: #7f7f7f; text-decoration: line-through;}
 
+#header-title {
+    text-indent: 0;
+    font-size: 320%;
+    font-weight: bold; 
+    line-height: 100%; 
+}
+
 #container {
     width: 80%;
     margin-left: auto;
