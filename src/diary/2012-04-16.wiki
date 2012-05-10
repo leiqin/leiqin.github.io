@@ -33,7 +33,20 @@ auth	required	pam_succeed_if.so user != root
 
 表示，非 root 用户都可以自动登录。
 
-这样就可以自动登录了。
+这样就可以自动登录了。不过目前的 lightdm 不会自动读取 /etc/profile 和 `$HOME/.profile` 的配置，在 lightdm.conf 文件中有这一行配置：
+
+{{{
+session-wrapper=/etc/X11/Xsession
+}}}
+
+修改这个文件，在它的最上面加入这两行：
+
+{{{
+. /etc/profile
+. $HOME/.profile
+}}}
+
+就行了。
 
 还有一个小问题，其实和 lightdm 没有什么直接关系，如果使用了 gnome-keyring 而又没有使用 gnome 桌面环境，比方说我使用的是 xfce ，[http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=653011 会有问题]：
 

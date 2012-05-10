@@ -63,7 +63,24 @@ auth	required	pam_succeed_if.so user != root
 </p>
 
 <p>
-这样就可以自动登录了。
+这样就可以自动登录了。不过目前的 lightdm 不会自动读取 /etc/profile 和 <code>$HOME/.profile</code> 的配置，在 lightdm.conf 文件中有这一行配置：
+</p>
+
+<pre>
+session-wrapper=/etc/X11/Xsession
+</pre>
+
+<p>
+修改这个文件，在它的最上面加入这两行：
+</p>
+
+<pre>
+. /etc/profile
+. $HOME/.profile
+</pre>
+
+<p>
+就行了。
 </p>
 
 <p>
