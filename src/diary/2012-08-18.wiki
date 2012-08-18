@@ -1,0 +1,54 @@
+%title 使用 exim 发邮件
+
+我本来使用的是 mutt + fetchmail + msmtp 在本地收发邮件，后来发现 debian 已经安装了  exim 来处理本地邮件，于是就想是不是可以用 exim 来代替 msmtp ，经过一番折腾后，已经 OK 了，其实很简单，真的很简单。
+
+首先：
+{{{
+sudo dpkg-reconfigure exim4-config
+}}}
+
+会出现如下选项：
+
+{{{
+互联网站；直接通过 SMTP 发送或接收信件                                                     │  
+用 smarthost 发信；通过 SMTP 或 fetchmail 接收信件
+用 smarthost 发信；无本地信件
+仅在本地投递信件；无网络连接
+现在不进行配置  
+}}}
+
+默认是第四个： 仅在本地投递信件；无网络连接
+
+第二个和第三个基本是一样的，都是先从本地发到 smarthost 也就是自己的邮箱，再由 smarthost 发到对方的邮箱，只不过一个处理本地信件，另一个不处理
+
+第一个是直接从本地发到对方邮箱，在自己的 PC 机上这么干通常会被对方当作垃圾邮件
+
+选择第二个，一路默认，在需要指定 smarthost 时，指定 smtp.gmail.com ，然后在 `/etc/exim4/passwd.client` 中设置用户名密码：
+
+{{{
+*:<username>@gmail.com:<password>
+}}}
+
+dpkg-reconfigure 应该会自动重启 exim 服务，没有的话就自己来吧：
+
+{{{
+sudo service exim restart
+}}}
+
+修改 mutt 的配置文件，让 mutt 用 exim 发邮件：
+
+{{{
+set sendmail=/usr/sbin/exim
+}}}
+
+就搞定了。
+
+这里再说一下 MUA（Mail User Agent) , MTA（Mail Transfer Agent）, MDA（Mail Delivery Agent）的关系。
+
+打个比方吧，MTA 就相当于邮局，很多个 MTA 就组成了一个邮件系统负责传输邮件。
+
+我们在寄信时，把写好的信投到小区的邮局，就是把信提交给邮件系统，但是 MTA 是一个程序，它听不懂人话，这就需要有一个中间层来和它打交道，这就是 MUA ，反过来收信的时候也是一样的，需要一个 MUA 和人打交道，然后 MUA 再去和其他的程序打交道。
+
+现在有一个人给我寄了一封信，信通过 MTA 传送到了我所在小区的邮局，小区的每个用户都有一个自己的邮箱，这时就需要一个邮递员把邮件分发到每个用户的邮箱里，这个邮递员就是一个 MDA 。
+
+我们自己机器上的 exim 其实就是一个 MTA ，只不过是一个私人开的邮局，上述几个选项中的第二个，smarthost 的那个，就是说，我们先把自己要寄的信给 exim ，由 exim 给小区邮局(smarthost)，进入邮件系统，发给对方。如果选择选项一的话，就意味着，那个我们私人开的邮局直接把信送往对方小区，这时候，对方小区的邮递员会发现这封信不是来自邮件系统的，他会认为这是一封垃圾邮件，把它放到垃圾箱里。
