@@ -17,11 +17,11 @@
                     <form action="http://www.google.com/cse" id="cse-search-box">
                         <input type="hidden" name="cx" value="010038583126736077913:gm2keba0yfm" />
                         <input type="hidden" name="ie" value="utf-8" />
-                        <input type="text" name="q" size="20" style="background: url("http://www.google.com/cse/intl/en/images/google_custom_search_watermark.gif") no-repeat scroll left center rgb(255, 255, 255)"/>
+                        <input type="text" name="q" size="20" style="background: url("http://www.google.com/cse/intl/zh_CN/images/google_custom_search_watermark.gif") no-repeat scroll left center rgb(255, 255, 255)"/>
                         <input type="submit" name="sa" value="搜索" />
                     </form>
                 </div>
-                <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&lang=zh"></script>
+                <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&lang=zh_CN"></script>
             </div>
             <div id="content">
             %content%

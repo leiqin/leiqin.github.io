@@ -17,18 +17,18 @@
                     <form action="http://www.google.com/cse" id="cse-search-box">
                         <input type="hidden" name="cx" value="010038583126736077913:gm2keba0yfm" />
                         <input type="hidden" name="ie" value="utf-8" />
-                        <input type="text" name="q" size="20" style="background: url("http://www.google.com/cse/intl/en/images/google_custom_search_watermark.gif") no-repeat scroll left center rgb(255, 255, 255)"/>
+                        <input type="text" name="q" size="20" style="background: url("http://www.google.com/cse/intl/zh_CN/images/google_custom_search_watermark.gif") no-repeat scroll left center rgb(255, 255, 255)"/>
                         <input type="submit" name="sa" value="搜索" />
                     </form>
                 </div>
-                <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&lang=zh"></script>
+                <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&lang=zh_CN"></script>
             </div>
             <div id="content">
                 <h1 class="justcenter">从源码安装 wine</h1>
                 
 
 <p>
-最近想玩一下 <a href="http://www.winehq.org">wine</a> ，在 linux 里运行一些 windows 的软件，最初的需求是为了解决 windows 下的 zip 包 中文文件名乱码的问题，感觉为了这么一点小事就开个虚拟机太蛋疼了，也没有找到 linux 下的原生解决方案，开个新终端，生成 `zh_CN.GB18030` 的 `locale` ，然后设置 `LANG=zh_CN.GB18030` 和 `LC_ALL=zh_CN.GB18030` 用 unzip 命令解压，结果是... 该是乱码的还是乱码。
+最近想玩一下 <a href="http://www.winehq.org">wine</a> ，在 linux 里运行一些 windows 的软件，最初的需求是为了解决 windows 下的 zip 包 中文文件名乱码的问题，感觉为了这么一点小事就开个虚拟机太蛋疼了，也没有找到 linux 下的原生解决方案，开个新终端，生成 <code>zh_CN.GB18030</code> 的 <code>locale</code> ，然后设置 <code>LANG=zh_CN.GB18030</code> 和 <code>LC_ALL=zh_CN.GB18030</code> 用 unzip 命令解压，结果是... 该是乱码的还是乱码。
 </p>
 
 <p>
@@ -56,7 +56,7 @@ make install
 </pre>
 
 <p>
-可以根据 `./configuare` 的输出，来安装依赖关系，也可以参考 <a href="http://wiki.winehq.org/Recommended_Packages">wine 的 wiki</a>。
+可以根据 <code>./configuare</code> 的输出，来安装依赖关系，也可以参考 <a href="http://wiki.winehq.org/Recommended_Packages">wine 的 wiki</a>。
 </p>
 
 <p>
@@ -72,11 +72,11 @@ winecfg
 </pre>
 
 <p>
-如果 LANG 是中文的话，这时应该显示的是乱码，不要紧，等会就不是了。它会在 `~/.wine` 下生成一些文件，我们就是要修改这写文件。
+如果 LANG 是中文的话，这时应该显示的是乱码，不要紧，等会就不是了。它会在 <code>~/.wine</code> 下生成一些文件，我们就是要修改这写文件。
 </p>
 
 <p>
-编辑 `~/.wine/system.reg` ，搜索 `CurrentVersion\\Fonts` 把它下面指定字体文件的地址全部换成<a href="http://wenq.org/">文泉驿</a>微米黑的字体文件
+编辑 <code>~/.wine/system.reg</code> ，搜索 <code>CurrentVersion\\Fonts</code> 把它下面指定字体文件的地址全部换成<a href="http://wenq.org/">文泉驿</a>微米黑的字体文件
 </p>
 
 <pre>
@@ -91,7 +91,7 @@ winecfg
 </pre>
 
 <p>
-这里有两个地方，一个是 `Windows` 还有一个是 `Windows NT` ，保存退出，再运行 `winecfg` 就可以看见亲切的中文了。
+这里有两个地方，一个是 <code>Windows</code> 还有一个是 <code>Windows NT</code> ，保存退出，再运行 <code>winecfg</code> 就可以看见亲切的中文了。
 </p>
 
 <p>

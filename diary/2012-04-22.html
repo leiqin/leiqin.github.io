@@ -17,11 +17,11 @@
                     <form action="http://www.google.com/cse" id="cse-search-box">
                         <input type="hidden" name="cx" value="010038583126736077913:gm2keba0yfm" />
                         <input type="hidden" name="ie" value="utf-8" />
-                        <input type="text" name="q" size="20" style="background: url("http://www.google.com/cse/intl/en/images/google_custom_search_watermark.gif") no-repeat scroll left center rgb(255, 255, 255)"/>
+                        <input type="text" name="q" size="20" style="background: url("http://www.google.com/cse/intl/zh_CN/images/google_custom_search_watermark.gif") no-repeat scroll left center rgb(255, 255, 255)"/>
                         <input type="submit" name="sa" value="搜索" />
                     </form>
                 </div>
-                <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&lang=zh"></script>
+                <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&lang=zh_CN"></script>
             </div>
             <div id="content">
                 <h1 class="justcenter">使用 vimwiki 写博客</h1>
@@ -32,7 +32,7 @@
 </p>
 
 <p>
-普通模式下 `\ww` 可以进入 wiki 的主页， `\w\w` 可以写当天的日记，它会在 wiki 的目录下生成一个 diary/yyyy-MM-dd.wiki 的文件，`\wi` 可以跳转到日记的索引，不过这个索引没什么用，不用管它。我只需要在写博客的时候用`\w\w` 写当天的日记，然后通过一个脚本根据日记文件的内容生成 wiki 的主页面，也就是 `\ww` 所在的页面，再生成 html ，把它发布到主机上，或者提交到 <a href="https://github.com/leiqin/leiqin.github.com">github</a> 上就万事大吉。
+普通模式下 <code>\ww</code> 可以进入 wiki 的主页， <code>\w\w</code> 可以写当天的日记，它会在 wiki 的目录下生成一个 diary/yyyy-MM-dd.wiki 的文件，<code>\wi</code> 可以跳转到日记的索引，不过这个索引没什么用，不用管它。我只需要在写博客的时候用<code>\w\w</code> 写当天的日记，然后通过一个脚本根据日记文件的内容生成 wiki 的主页面，也就是 <code>\ww</code> 所在的页面，再生成 html ，把它发布到主机上，或者提交到 <a href="https://github.com/leiqin/leiqin.github.com">github</a> 上就万事大吉。
 </p>
 
 <p>
@@ -117,11 +117,11 @@ endfunction " }}}
 </pre>
 
 <p>
-把它放到 `~/.vim/autoload/vimwiki/blog.vim` 。
+把它放到 <code>~/.vim/autoload/vimwiki/blog.vim</code> 。
 </p>
 
 <p>
-然后在 `~/.vimrc` 中加入两行：
+然后在 <code>~/.vimrc</code> 中加入两行：
 </p>
 
 <pre>
@@ -130,7 +130,7 @@ nnoremap &lt;Leader&gt;wba :call vimwiki#blog#BuildAll()&lt;CR&gt;
 </pre>
 
 <p>
-用 `\w\w` 写完博客，只需要在前五行包含 `%title` ，就可以使用 `\wbi` 生成 wiki 的主页面，这时候用 `\ww` 就可以看到刚才写的文章了，再用 `\wba` 生成 html 了，发布出去就可以了。
+用 <code>\w\w</code> 写完博客，只需要在前五行包含 <code>%title</code> ，就可以使用 <code>\wbi</code> 生成 wiki 的主页面，这时候用 <code>\ww</code> 就可以看到刚才写的文章了，再用 <code>\wba</code> 生成 html 了，发布出去就可以了。
 </p>
 
             </div>
