@@ -1,21 +1,20 @@
-%title 使用 exim 发邮件
+---
+layout: post
+title: 使用 exim 发邮件
+---
 
 我本来使用的是 mutt + fetchmail + msmtp 在本地收发邮件，后来发现 debian 已经安装了  exim 来处理本地邮件，于是就想是不是可以用 exim 来代替 msmtp ，经过一番折腾后，已经 OK 了，其实很简单，真的很简单。
 
 首先：
-{{{
-sudo dpkg-reconfigure exim4-config
-}}}
+    sudo dpkg-reconfigure exim4-config
 
 会出现如下选项：
 
-{{{
-互联网站；直接通过 SMTP 发送或接收信件                                                     │  
-用 smarthost 发信；通过 SMTP 或 fetchmail 接收信件
-用 smarthost 发信；无本地信件
-仅在本地投递信件；无网络连接
-现在不进行配置  
-}}}
+    互联网站；直接通过 SMTP 发送或接收信件                                                     │  
+    用 smarthost 发信；通过 SMTP 或 fetchmail 接收信件
+    用 smarthost 发信；无本地信件
+    仅在本地投递信件；无网络连接
+    现在不进行配置  
 
 默认是第四个： 仅在本地投递信件；无网络连接
 
@@ -25,21 +24,15 @@ sudo dpkg-reconfigure exim4-config
 
 选择第二个，一路默认，在需要指定 smarthost 时，指定 smtp.gmail.com ，然后在 `/etc/exim4/passwd.client` 中设置用户名密码：
 
-{{{
-*:<username>@gmail.com:<password>
-}}}
+    *:<username>@gmail.com:<password>
 
 dpkg-reconfigure 应该会自动重启 exim 服务，没有的话就自己来吧：
 
-{{{
-sudo service exim restart
-}}}
+    sudo service exim restart
 
 修改 mutt 的配置文件，让 mutt 用 exim 发邮件：
 
-{{{
-set sendmail=/usr/sbin/exim
-}}}
+    set sendmail=/usr/sbin/exim
 
 就搞定了。
 

@@ -1,0 +1,89 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <link rel="Stylesheet" type="text/css" href="../../../css/default.css" />
+		<link rel="shortcut icon" href="/images/galaxy-ngc3370.jpg" type="image/jpeg" />
+		<title>lightdm 自动登录 - 雷钦的博客</title>
+	</head>
+	<body>
+        <div id="container">
+            <div id="header">
+                <p id="header-title">我自求我道，各自求各道</p>
+            </div>
+            <div id="label">
+                <a href="../../../index.html">首页</a>
+                <div id="googlecustomsearch" style="display: inline-block;float:right">
+    <form action="http://www.google.com/cse" id="cse-search-box">
+        <input type="hidden" name="cx" value="010038583126736077913:gm2keba0yfm" />
+        <input type="hidden" name="ie" value="utf-8" />
+        <input type="text" name="q" size="20" style="background: url("http://www.google.com/cse/intl/zh_CN/images/google_custom_search_watermark.gif") no-repeat scroll left center rgb(255, 255, 255)"/>
+        <input type="submit" name="sa" value="搜索" />
+    </form>
+</div>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&lang=zh_CN"></script>
+
+            </div>
+            <div id="content">
+                <h1 class="justcenter">lightdm 自动登录</h1>
+                <p><a href='http://www.freedesktop.org/wiki/Software/LightDM'>lightdm</a> 是一个新兴的，轻量级的 Display Manager 。</p>
+
+<p>要让它 <a href='http://siripong-computer-tips.blogspot.com/2011/09/enable-lightdm-autologin-debian-wheezy.html'>自动登录</a> 需要修改它的配置文件：/etc/lightdm/lightdm.conf</p>
+
+<pre><code>[SeatDefaults]
+autologin-user={YOUR USER NAME}
+pam-service=lightdm-autologin</code></pre>
+
+<p>在 SeatDefaults 下修改或添加这两个变量。</p>
+
+<p>然后：</p>
+
+<pre><code>cd /etc/pam.d
+sudo cp lightdm lightdm-autologin</code></pre>
+
+<p>将：</p>
+
+<pre><code>@include common-auth</code></pre>
+
+<p>这一行改成：</p>
+
+<pre><code>auth	required	pam_succeed_if.so user != root</code></pre>
+
+<p>表示，非 root 用户都可以自动登录。</p>
+
+<p>这样就可以自动登录了。</p>
+
+<p>还有一个小问题，其实和 lightdm 没有什么直接关系，如果使用了 gnome-keyring 而又没有使用 gnome 桌面环境，比方说我使用的是 xfce ， <a href='http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=653011'>会有问题</a> ：</p>
+
+<pre><code>WARNING: gnome-keyring:: couldn&#39;t connect to: /tmp/keyring-xxx/pkcs11: 没有那个文件或目录  </code></pre>
+
+<p>只需要将 /etc/xdg/autostart/gnome-keyring-*.desktop 中的 <code>OnlyShowIn=GNOME;Unity;</code> 这一行注掉就行了。</p>
+
+<pre><code>sed -i.bak &#39;s/^OnlyShowIn/#&amp;/&#39; /etc/xdg/autostart/gnome-keyring-*</code></pre>
+            </div>
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'leiqin'; // required: replace example with your forum shortname
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+ var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+ dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+ (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+ })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        </div>
+        <div id="copyright" style="text-align:center">
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+        <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" />
+    </a>
+    <br />
+    This work is licensed under a 
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
+</div>
+
+	</body>
+</html>

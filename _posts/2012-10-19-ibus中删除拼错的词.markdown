@@ -1,4 +1,7 @@
-%title ibus 中删除拼错的词
+---
+layout: post
+title: ibus 中删除拼错的词
+---
 
 我在 linux 中一直使用的是 ibus 输入法，它已经满足我的需求了，这里说一个 ibus 的功能，有时候会拼错词，而 ibus 会把拼错的词也记录下来，要删除这个词只需要 Ctrl + <数字> 就行了。
 

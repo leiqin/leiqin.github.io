@@ -3,4 +3,3 @@ safe: true
 lsi: false
 pygments: true
 permalink: /:year/:month/:day/:title.html
-layout: default

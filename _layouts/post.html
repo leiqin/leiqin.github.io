@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <link rel="Stylesheet" type="text/css" href="../../../css/default.css" />
+		<link rel="shortcut icon" href="/images/galaxy-ngc3370.jpg" type="image/jpeg" />
+		<title>{{ page.title }} - 雷钦的博客</title>
+	</head>
+	<body>
+        <div id="container">
+            <div id="header">
+                <p id="header-title">我自求我道，各自求各道</p>
+            </div>
+            <div id="label">
+                <a href="../../../index.html">首页</a>
+                {% include google_custom_search.html %}
+            </div>
+            <div id="content">
+                <h1 class="justcenter">{{ page.title }}</h1>
+                {{ content }}
+            </div>
+            {% include disqus.html %}
+        </div>
+        {% include copyright.html %}
+	</body>
+</html>

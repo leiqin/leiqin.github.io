@@ -1,0 +1,45 @@
+---
+layout: post
+title: 从源码安装 wine
+---
+
+最近想玩一下 [wine](http://www.winehq.org)，在 linux 里运行一些 windows 的软件，最初的需求是为了解决 windows 下的 zip 包 中文文件名乱码的问题，感觉为了这么一点小事就开个虚拟机太蛋疼了，也没有找到 linux 下的原生解决方案，开个新终端，生成 `zh_CN.GB18030` 的 `locale` ，然后设置 `LANG=zh_CN.GB18030` 和 `LC_ALL=zh_CN.GB18030` 用 unzip 命令解压，结果是... 该是乱码的还是乱码。
+
+wine 在 debian sid 源中的版本太低，只有 1.0 ，而 wine-unstable 的版本只有 1.1 ，而实际上 wine 的稳定版已经到了 1.4 ，而开发版已经到了 1.5 ，我决定从[源码安装 wine](http://wiki.winehq.org/GitWine) 。 
+
+首先下载源码：
+
+    git clone git://source.winehq.org/git/wine.git ~/wine-git
+    cd ~/wine-git
+
+然后[安装 wine](http://www.winehq.org/site/docs/wineusr-guide/installing-wine-source) ：
+
+    ./configure
+    make depend
+    make
+    make install
+
+可以根据 `./configuare` 的输出，来安装依赖关系，也可以参考 [wine 的 wiki](http://wiki.winehq.org/Recommended_Packages) 。
+
+如果没有出错的话，就安装成功了。接下来，就是要解决中文乱码的问题，这里我并没有找到一个非常好的方法，不过至少找到一个可用的方法。
+
+首先执行：
+
+    winecfg
+
+如果 LANG 是中文的话，这时应该显示的是乱码，不要紧，等会就不是了。它会在 `~/.wine` 下生成一些文件，我们就是要修改这写文件。
+
+编辑 `~/.wine/system.reg` ，搜索 `CurrentVersion\\Fonts` 把它下面指定字体文件的地址全部换成[文泉驿](http://wenq.org/) 微米黑的字体文件
+
+    "Courier"="Z:\\path\\to\\wqy-microhei.ttc"
+    "Marlett (TrueType)"="Z:\\path\\to\\wqy-microhei.ttc"
+    "MS Sans Serif"="Z:\\path\\to\\wqy-microhei.ttc"
+    "MS Serif"="Z:\\path\\to\\wqy-microhei.ttc"
+    "Small Fonts"="Z:\\path\\to\\wqy-microhei.ttc"
+    "Symbol (TrueType)"="Z:\\path\\to\\wqy-microhei.ttc"
+    "Tahoma (TrueType)"="Z:\\path\\to\\wqy-microhei.ttc"
+    "Tahoma Bold (TrueType)"="Z:\\path\\to\\wqy-microhei.ttc"
+
+这里有两个地方，一个是 `Windows` 还有一个是 `Windows NT` ，保存退出，再运行 `winecfg` 就可以看见亲切的中文了。
+
+我安装的程序 [7z](http://www.7-zip.org/)  在安装和使用时都没有乱码。 [radmin](http://www.radmin.cn/)  的客户端，在安装过程中有乱码，使用时没有乱码。总之，已经不影响使用了。
