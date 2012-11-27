@@ -1,0 +1,28 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>雷钦的博客</title>
+    <link href="http://blog.leiqin.name/atom.xml" rel="self"/>
+    <link href="http://blog.leiqin.name"/>
+    <updated>{{ site.posts.first.date | date: "%Y-%m-%dT%H:%M:%S%Z" }}</updated>
+    <id>http://blog.leiqin.name</id>
+    <author>
+        <name>雷钦</name>
+        <email>leiqin2010@gmail.com</email>
+    </author>
+    {% for post in site.posts limit:10 %}
+    <entry>
+        <title>{{ post.title }}</title>
+        <link href="http://blog.leiqin.name{{ post.url }}"/>
+        <updated>{{ site.posts.first.date | date: "%Y-%m-%dT%H:%M:%S%Z" }}</updated>
+        <id>http://blog.leiqin.name{{ post.url }}</id>
+        <content type="html">
+            <![CDATA[
+            {{ post.content | markdownify }}
+            ]]>
+        </content>
+    </entry>
+    {% endfor %}
+</feed>
