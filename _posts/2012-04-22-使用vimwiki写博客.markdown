@@ -9,6 +9,7 @@ title: 使用 vimwiki 写博客
 
 这就是我写的脚本：
 
+    {% highlight vim %}
     " use vimwiki to blog
 
     " load only once 
@@ -82,6 +83,7 @@ title: 使用 vimwiki 写博客
         let file = path . VimwikiGet('index') . VimwikiGet('ext')
         call writefile(a:list, file)
     endfunction " 
+    {% endhighlight %}
 
 把它放到 `~/.vim/autoload/vimwiki/blog.vim` 。
 
