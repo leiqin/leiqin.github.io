@@ -20,7 +20,7 @@ layout: nil
         <id>http://blog.leiqin.name{{ post.url }}</id>
         <content type="html">
             <![CDATA[
-            {{ post.content | markdownify }}
+            {{ post.content }}
             ]]>
         </content>
     </entry>
