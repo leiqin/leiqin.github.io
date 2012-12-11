@@ -1,0 +1,53 @@
+---
+layout: post
+title: 在本地部署 webpy.org
+---
+
+[web.py](http://webpy.org) 是一个轻量级的 Python Web 框架（类似与 [django](https://www.djangoproject.com/) ，只不过 django 是重量级的），webpy.org 整个网站都在 [github](https://github.com/webpy/webpy.github.com) 上。我想把它下下来，在本地部署一下，遇到一些问题，可能有人觉得这些问题很简单，不过我还是搞了半天才搞定的，记录一下吧。
+
+首先下载：
+
+    git clone git://github.com/webpy/webpy.github.com.git
+
+然后：
+
+    cd webpy.github.com
+    jekyll --server 8080
+
+访问首页正常，但是访问 install 页面时，提示 _Not Found_ ，页面请求的 URL 是： http://localhost:8080/install ，而实际的文件是 install.html 。文件有后缀名，而 URL 里没有，可是在 github 上，或者说是 webpy 的主页上，是正常的，URL 里也没有后缀，但可以看到页面，怎么回事呢？
+
+通过搜索，我了解到 Apache 有一个选项叫做 MultiViews 可以智能的选择资源的后缀名，我决定尝试一下。
+
+首先：
+
+    mkdir /mnt/webpy.org
+    jekyll /mnt/webpy.org
+    
+然后修改 Apache 的配置文件：
+
+    Alias / /mnt/webpy.org/
+    <Directory "/mnt/webpy.org/">
+        Options MultiViews
+    </Directory>
+
+访问首页正常，访问 http://localhost/install 时，是有页面出来，不过出来的是 install.es.html ，怎么回事呢？是不是 MultiViews 在智能选择的时候，选择了 es 这种语言，可是为什么呢？我用 FireBug 查看请求头，请求头里有：
+
+    Accept-Language	en-us,en;q=0.5
+
+指定的语言是 en-us 或者 en 啊，没 es 什么事！然后我查看文件发现里面没有 install.en.html 只有 install.html 和一些其他语言的文件比如： install.es.html ，修改配置：
+
+    Alias / /mnt/webpy.org/
+    <Directory "/mnt/webpy.org/">
+        Options MultiViews
+        DefaultLanguage en 
+    </Directory>
+
+恩，很好，正常了，不错不错。在 install 页面上有一个 _chinese 简体中文_ 的链接，点上去，我晕，出现一个 _Not Acceptable_ 的错误，此时的 URL 是 http://localhost/install.zh-cn ，然后目录里确实有 install.zh-cn.html 这个文件，通过查看 Apache mod\_negotiation 的文档，以及自己一通乱试，发现只要将配置文件改成如下这样就行了（访问其他语言的话，还需要在 LanguagePriority 中增加设置）。
+
+    Alias / /mnt/webpy.org/
+    <Directory "/mnt/webpy.org/">
+        Options MultiViews
+        DefaultLanguage en 
+        LanguagePriority en zh-cn
+    </Directory>
+
