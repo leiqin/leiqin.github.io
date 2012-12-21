@@ -6,6 +6,7 @@ title: 使用 exim 发邮件
 我本来使用的是 mutt + fetchmail + msmtp 在本地收发邮件，后来发现 debian 已经安装了  exim 来处理本地邮件，于是就想是不是可以用 exim 来代替 msmtp ，经过一番折腾后，已经 OK 了，其实很简单，真的很简单。
 
 首先：
+
     sudo dpkg-reconfigure exim4-config
 
 会出现如下选项：

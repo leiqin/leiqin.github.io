@@ -82,14 +82,14 @@ title: 使用 vimwiki 写博客
         let path = expand(VimwikiGet('path'))
         let file = path . VimwikiGet('index') . VimwikiGet('ext')
         call writefile(a:list, file)
-    endfunction " 
-    {% endhighlight %}
+    endfunction " {% endhighlight %}
 
 把它放到 `~/.vim/autoload/vimwiki/blog.vim` 。
 
 然后在 `~/.vimrc` 中加入两行：
 
+    {% highlight vim %}
     nnoremap <Leader>wbi :call vimwiki#blog#BuildIndex()<CR>
-    nnoremap <Leader>wba :call vimwiki#blog#BuildAll()<CR>
+    nnoremap <Leader>wba :call vimwiki#blog#BuildAll()<CR> {% endhighlight %}
 
 用 `\w\w` 写完博客，只需要在前五行包含 `%title` ，就可以使用 `\wbi` 生成 wiki 的主页面，这时候用 `\ww` 就可以看到刚才写的文章了，再用 `\wba` 生成 html 了，发布出去就可以了。

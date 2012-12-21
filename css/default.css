@@ -10,10 +10,12 @@ h5 {font-size: 130%; color: #989898;}
 h6 {font-size: 120%; color: #9c9c9c;}
 
 pre {
-    border: 1px dashed #333333; 
-    background: #dddddd;
-    margin-left: 2em; 
     padding: 0.5em;
+    border: 1px solid #8cacbb;
+    color: Black;
+    background-color: #f0f0f0;
+    font-family: monospace;
+    margin-left: 2em; 
 }
 
 .right { float: right; }
