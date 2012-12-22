@@ -1,4 +1,3 @@
-body {margin: 0pt; padding: 0pt;}
 img {border: none;}
 p {text-indent: 2em;}
 a {text-decoration: none;}
@@ -8,6 +7,12 @@ h3 {font-size: 180%; color: #707070;}
 h4 {font-size: 140%; color: #909090;}
 h5 {font-size: 130%; color: #989898;}
 h6 {font-size: 120%; color: #9c9c9c;}
+
+body {
+    margin: 0pt; 
+    padding: 0pt;
+    background: #bbbbbb;
+}
 
 pre {
     padding: 0.5em;
@@ -21,18 +26,18 @@ pre {
 .right { float: right; }
 .justcenter { text-align: center; }
 
-
 #container {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    background: #dddddd;
 }
 
 #header {
     padding: 2em;
     text-align: center;
     height: 9em;
-    background: #aaaaaa
+    background: #888888;
 }
 
 #header p {
@@ -50,7 +55,7 @@ pre {
     font-size: 26px;
     line-height: 32px;
     height: 32px;
-    background: #bbbbbb;
+    background: #999999;
 }
 
 #label ul,#label li {
