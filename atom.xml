@@ -12,6 +12,7 @@ layout: nil
         <name>雷钦</name>
         <email>leiqin2010@gmail.com</email>
     </author>
+    <copyright>Creative Commons Attribution-ShareAlike 3.0 Unported License</copyright>
     {% for post in site.posts limit:10 %}
     <entry>
         <title>{{ post.title }}</title>
