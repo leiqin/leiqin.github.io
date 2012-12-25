@@ -6,7 +6,7 @@ layout: nil
     <title>雷钦的博客</title>
     <link href="http://blog.leiqin.name/atom.xml" rel="self"/>
     <link href="http://blog.leiqin.name"/>
-    <updated>{{ site.posts.first.date | date: "%Y-%m-%dT%H:%M:%S%Z" }}</updated>
+    <updated>{{ site.time | date_to_xmlschema }}</updated>
     <id>http://blog.leiqin.name</id>
     <author>
         <name>雷钦</name>
@@ -17,7 +17,7 @@ layout: nil
     <entry>
         <title>{{ post.title }}</title>
         <link href="http://blog.leiqin.name{{ post.url }}"/>
-        <updated>{{ site.posts.first.date | date: "%Y-%m-%dT%H:%M:%S%Z" }}</updated>
+        <updated>{{ post.date | date_to_xmlschema }}</updated>
         <id>http://blog.leiqin.name{{ post.url }}</id>
         <content type="html">
             <![CDATA[
