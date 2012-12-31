@@ -58,12 +58,35 @@ pre {
     background: url('/images/bg_label.png') repeat-x scroll
 }
 
-#label ul,#label li {
+#label ul {
     display: inline;
+}
+
+#label li {
+    float: left;
+    display: block;
+    position: relative;
+    left:2em;
 }
 
 #label a {
     color: white;
+}
+
+#label li:hover {
+    background: #dddddd
+}
+
+#label a:hover {
+    color: blue;
+}
+
+a.index {
+    color: #222222;
+}
+
+a.index:hover {
+    color: #1982d1;
 }
 
 #feedicon {
