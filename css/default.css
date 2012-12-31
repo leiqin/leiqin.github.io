@@ -30,25 +30,24 @@ pre {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    background: #cccccc;
+    background: #dddddd;
 }
 
 #header {
     padding: 2em;
     text-align: center;
     height: 9em;
-    background: #888888;
 }
 
 #header p {
     text-indent: 0;
     font-size: 320%;
     font-weight: bold; 
+    color: #040d77;
 }
 
 #content {
     padding: 2em;
-    background: #dddddd;
 }
 
 #label {
@@ -56,11 +55,15 @@ pre {
     font-size: 26px;
     line-height: 32px;
     height: 32px;
-    background: #999999;
+    background: url('/images/bg_label.png') repeat-x scroll
 }
 
 #label ul,#label li {
     display: inline;
+}
+
+#label a {
+    color: white;
 }
 
 #feedicon {
@@ -82,8 +85,4 @@ pre {
     font-size: 16px;
     position: relative;
     top: -10px;
-}
-
-#copyright {
-    background: #aaaaaa;
 }
