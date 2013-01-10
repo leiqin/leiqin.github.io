@@ -3,7 +3,7 @@ layout: post
 title: 关于同步和异步的理解
 ---
 
-最近看到 [CPyUG](https://groups.google.com/group/python-cn) 上关于同步和异步的讨论，也在网上看了一些文章，记录一下自己的想法。
+最近看到 [CPyUG](https://groups.google.com/forum/?fromgroups=#!topic/python-cn/poF9LmXJXl0%5B1-25-false%5D) 上关于同步和异步的讨论，也在网上看了一些文章，记录一下自己的想法。
 
 首先，相对于内核来说，内核提供两种类型的读取操作：同步和异步，其中同步的读操作又分为阻塞和非阻塞的。
 
