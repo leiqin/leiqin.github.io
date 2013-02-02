@@ -84,6 +84,10 @@ a.index {
     color: #222222;
 }
 
+a.index:visited {
+    color: #551a8b;
+}
+
 a.index:hover {
     color: #1982d1;
 }
