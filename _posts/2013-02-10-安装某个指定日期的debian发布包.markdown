@@ -7,7 +7,7 @@ title: 安装某个指定日期的 debian 发布包
 
     Advanced Micro Devices [AMD] nee ATI Caicos [Radeon HD 6400M/7400M Series]
 
-用的驱动程序是 fglrx-driver，本来是可以用 [wine](http://www.winehq.org) 玩《魔兽世界》和《星际2》的，后来发生了一些事情，可以参考 [这里](http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=671320) 和 [这里](http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=675585) ，大概的情况就是，debian 升级了 xserver-xorg-core ，将 xorg-video-abi 由协议 11 升级到了12 ，而 AMD 的官方驱动不支持 xorg-video-abi-12 ，这个问题一度导致了 fglrx-driver 被移除出 debian 的 testing 版本，后来 AMD 升级了驱动，终于解决了这个冲突。
+用的驱动程序是 fglrx-driver，本来是可以用 [wine](http://www.winehq.org) 玩《魔兽世界》和《星际2》的，后来发生了一些事情，可以参考 [这里](http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=671320) 和 [这里](http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=675585) ，大概的情况就是，debian 升级了 xserver-xorg-core ，将 xorg-video-abi 由协议 11 升级到了 12 ，而 AMD 的官方驱动不支持 xorg-video-abi-12 ，这个问题一度导致了 fglrx-driver 被移除出 debian 的 testing 版本，后来 AMD 升级了驱动，终于解决了这个冲突。
 
 可是对我来说，用 xorg-video-abi-11 加上老版本的 fglrx-driver 是可以用 wine 打游戏的，而升级之后用 xorg-video-abi-12 加上新版本的 fglrx-driver 一开游戏就花屏... ... 本来也没什么，不能玩就不玩了，我只是一个休闲玩家，打打战役而已，不过，最近听说 _虫群之心_ 要出来了，而且还是送的，不用另外花钱，我就又想玩玩看了。
 
