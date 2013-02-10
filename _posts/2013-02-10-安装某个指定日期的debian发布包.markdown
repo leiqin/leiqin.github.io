@@ -1,0 +1,39 @@
+---
+layout: post
+title: 安装某个指定日期的 debian 发布包
+---
+
+事情是这样的，我的电脑是 ATI 的显卡，`lspci` 信息如下：
+
+    Advanced Micro Devices [AMD] nee ATI Caicos [Radeon HD 6400M/7400M Series]
+
+用的驱动程序是 fglrx-driver，本来是可以用 [wine](http://www.winehq.org) 玩《魔兽世界》和《星际2》的，后来发生了一些事情，可以参考 [这里](http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=671320) 和 [这里](http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=675585) ，大概的情况就是，debian 升级了 xserver-xorg-core ，将 xorg-video-abi 由协议 11 升级到了12 ，而 AMD 的官方驱动不支持 xorg-video-abi-12 ，这个问题一度导致了 fglrx-driver 被移除出 debian 的 testing 版本，后来 AMD 升级了驱动，终于解决了这个冲突。
+
+可是对我来说，用 xorg-video-abi-11 加上老版本的 fglrx-driver 是可以用 wine 打游戏的，而升级之后用 xorg-video-abi-12 加上新版本的 fglrx-driver 一开游戏就花屏... ... 本来也没什么，不能玩就不玩了，我只是一个休闲玩家，打打战役而已，不过，最近听说 _虫群之心_ 要出来了，而且还是送的，不用另外花钱，我就又想玩玩看了。
+
+首先，尝试使用最新的 unstable 里的 xserver-xorg-core 和 fglrx-driver ，尝试失败，依然花屏。
+
+然后，我就想把 xserver-xorg-core 退回到以前的版本，就是提供 xorg-video-abi-11 协议的版本。一开始，我想手动用 dpkg 安装老的包，可是这就意味着我要自己处理依赖关系的问题，这太蛋疼了！放弃。然后，我在网上寻寻觅觅，终于被我找到了这么一个网站： [snapshot.debian.org](http://snapshot.debian.org)  ，它对一段时间内 debian 的仓库做了快照，很好，就是它了。
+
+先修改 sources.list ，加入：
+
+    deb http://snapshot.debian.org/archive/debian/20120501/ testing main contrib non-free
+
+把原来的源暂时先注释掉。
+
+然后：
+
+    sudo apt-get -o Acquire::Check-Valid-Until=false update
+    sudo apt-get install xserver-xorg-core/testing
+    sudo apt-get install fglrx-driver/testing
+
+注意，此时由于 xserver-xorg-core 的版本降级了，xorg 会被卸载掉，需要再把它装上：
+
+    sudo apt-get install xorg
+
+然后把 xserver-xorg-core 和 fglrx-driver 的版本 hold 住：
+
+    echo xserver-xorg-core hold | sudo dpkg --set-selections
+    echo fglrx-driver hold | sudo dpkg --set-selections
+
+最后，把 sources.list 改回来，重启一下，就大功告成了，又可以享受游戏了，哇哈哈哈哈！
