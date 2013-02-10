@@ -28,6 +28,7 @@ wine 在 debian sid 源中的版本太低，只有 1.0 ，而 wine-unstable 的�
     winecfg
 
 如果 LANG 是中文的话，这时应该显示的是乱码，不要紧，等会就不是了。它会在 `~/.wine` 下生成一些文件，我们就是要修改这写文件。
+（PS：根据我最近的编译安装经验，已经不需要手动更改字体文件了，只要环境变量是中文，`LANG=zh_CN.UTF-8`，wine 会自己处理中文字体的问题）
 
 编辑 `~/.wine/system.reg` ，搜索 `CurrentVersion\\Fonts` 把它下面指定字体文件的地址全部换成[文泉驿](http://wenq.org/) 微米黑的字体文件
 
