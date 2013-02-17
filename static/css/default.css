@@ -55,7 +55,7 @@ pre {
     font-size: 20px;
     line-height: 32px;
     height: 32px;
-    background: url('/images/bg_label.png') repeat-x scroll
+    background: url('/static/images/bg_label.png') repeat-x scroll
 }
 
 #label ul {
@@ -69,13 +69,13 @@ pre {
     left:2em;
 }
 
-#labels a {
+#labeltext a {
     color: white;
     padding: 0 0.5em;
     display: block;
 }
 
-#labels a:hover {
+#labeltext a:hover {
     color: blue;
     background: #dddddd
 }

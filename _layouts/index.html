@@ -1,24 +1,12 @@
 <html>
 	<head>
-		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-        <link rel="Stylesheet" type="text/css" href="/css/default.css" />
-        <link rel="Stylesheet" type="text/css" href="/css/pygments.css" />
-		<link rel="shortcut icon" href="/images/galaxy-ngc3370.jpg" type="image/jpeg" />
+        {% include common_html_head.html %}
 		<title>雷钦的博客</title>
-        {% include google_analytics.html %}
 	</head>
 	<body>
         <div id="container">
-            <div id="header">
-                <p id="header-title">我自求我道，各自求各道</p>
-            </div>
-            <div id="label">
-                {% include labels.html %}
-                <div class="right">
-                    {% include atom.html %}
-                    {% include google_custom_search.html %}
-                </div>
-            </div>
+            {% include header.html %}
+            {% include label.html %}
             <div id="content">
 			{{ content }}
             </div>
