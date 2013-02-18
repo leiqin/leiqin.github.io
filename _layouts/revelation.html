@@ -1,0 +1,30 @@
+<html>
+	<head>
+        {% include common_html_head.html %}
+		<title>{{ page.title }} - 雷钦的博客</title>
+		<script>
+			$(document).ready(function(){
+				$('dt').each(function(){
+					$(this).click(function(){
+						$(this).next().toggle()
+					})
+				})
+			})
+		</script>
+		<style>
+			dt {cursor: pointer;}
+			dd {display: none;}
+		</style>
+	</head>
+	<body>
+        <div id="container">
+            {% include header.html %}
+            {% include label.html %}
+            <div id="content">
+                {{ content }}
+            </div>
+            {% include disqus.html %}
+            {% include copyright.html %}
+        </div>
+	</body>
+</html>
