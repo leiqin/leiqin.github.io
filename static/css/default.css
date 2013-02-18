@@ -50,12 +50,12 @@ dd {
 #header {
     padding: 1em;
 	padding-left: 5em;
-    min-height: 5em;
+    min-height: 9em;
 }
 
 #header-title {
     text-indent: 0;
-    font-size: 220%;
+    font-size: 200%;
     font-weight: bold; 
 }
 
