@@ -48,16 +48,19 @@ dd {
 }
 
 #header {
-    padding: 2em;
-    text-align: center;
-    height: 9em;
+    padding: 1em;
+	padding-left: 5em;
+    min-height: 5em;
 }
 
-#header p {
+#header-title {
     text-indent: 0;
-    font-size: 320%;
+    font-size: 220%;
     font-weight: bold; 
-    color: #040d77;
+}
+
+#header-title a {
+	color: #040d77;
 }
 
 #content {
