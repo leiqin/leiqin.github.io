@@ -17,7 +17,7 @@ body {
 pre {
     padding: 0.5em;
     border: 1px solid #8cacbb;
-    color: Black;
+    color: black;
     background-color: #f0f0f0;
     font-family: monospace;
     margin-left: 2em; 
@@ -25,14 +25,13 @@ pre {
 
 dt {
 	font-size: 150%;
-	margin-top: 1em;
-	margin-bottom: 0.5em;
+	padding: 0.5em;
 }
 
 dd {
     padding: 0.5em;
     border: 1px solid #8cacbb;
-    color: Black;
+    color: black;
     background-color: #f0f0f0;
     margin-left: 2em; 
 }

@@ -6,7 +6,13 @@
 			$(document).ready(function(){
 				$('dt').each(function(){
 					$(this).click(function(){
-						$(this).next().toggle()
+						//$(this).next().toggle()
+						var dd = $(this).next('dd');
+						if (dd.is(':visible')) {
+							dd.slideUp();
+						} else {
+							dd.slideDown();
+						}
 					})
 				})
 			})
