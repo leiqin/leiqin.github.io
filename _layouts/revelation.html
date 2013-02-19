@@ -4,9 +4,9 @@
 		<title>{{ page.title }} - 雷钦的博客</title>
 		<script>
 			$(document).ready(function(){
-				$('dt').css('cursor', 'pointer');
-				$('dd').hide();
-				$('dt').each(function(){
+				$('#content dt').css('cursor', 'pointer');
+				$('#content dd').hide();
+				$('#content dt').each(function(){
 					$(this).click(function(){
 						//$(this).next().toggle()
 						var dd = $(this).next('dd');
@@ -16,7 +16,18 @@
 							dd.slideDown();
 						}
 					})
-				})
+				});
+				$('#content dl').prepend('<div class="right"><span class="dd-show">展开</span> <span class="dd-hide">折叠</span></div>');
+				$('#content dl .dd-show')
+					.css('cursor', 'pointer').css('color', 'grey')
+					.click(function(){
+						$(this).parents('dl').find('dd').show();
+					});
+				$('#content dl .dd-hide')
+					.css('cursor', 'pointer').css('color', 'grey')
+					.click(function(){
+						$(this).parents('dl').find('dd').hide();
+					});
 			})
 		</script>
 	</head>
