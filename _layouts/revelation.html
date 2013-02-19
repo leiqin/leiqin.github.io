@@ -4,6 +4,8 @@
 		<title>{{ page.title }} - 雷钦的博客</title>
 		<script>
 			$(document).ready(function(){
+				$('dt').css('cursor', 'pointer');
+				$('dd').hide();
 				$('dt').each(function(){
 					$(this).click(function(){
 						//$(this).next().toggle()
@@ -17,10 +19,6 @@
 				})
 			})
 		</script>
-		<style>
-			dt {cursor: pointer;}
-			dd {display: none;}
-		</style>
 	</head>
 	<body>
         <div id="container">
