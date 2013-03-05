@@ -51,3 +51,16 @@ title: 在本地部署 webpy.org
         LanguagePriority en zh-cn
     </Directory>
 
+###P.S. 2013-03-05
+
+这个其实也可以用 mod\_rewrite 来实现：
+
+	DocumentRoot /mnt/webpy.org/
+	RewriteEngine on
+	RewriteLog ${APACHE_LOG_DIR}/rewrite.log
+	RewriteLogLevel 3 
+
+	RewriteCond %{LA-U:REQUEST_FILENAME}.html -f
+	RewriteRule (.*) $1.html [L]
+
+PS: 有个小问题让我纠结了半天，debian testing 安装的 apache 已经默认帮我配置好了一个 VirturlHost ，我一开始没有注意，只是在 apache2.conf 里修改配置，怎么都不生效，后来把那个 VirturlHost 注掉就好了。
