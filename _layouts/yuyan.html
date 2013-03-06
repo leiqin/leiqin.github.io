@@ -1,0 +1,16 @@
+<html>
+	<head>
+        {% include common_html_head.html %}
+		<title>{{ page.title }} - 雷钦的博客</title>
+	</head>
+	<body>
+        <div id="container">
+            {% include header.html %}
+            {% include label.html %}
+            <div id="content">
+                {{ content }}
+            </div>
+            {% include copyright.html %}
+        </div>
+	</body>
+</html>
