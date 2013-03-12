@@ -61,8 +61,8 @@ title: 克雷圣经
 事不宜以是非论者，十居七八；人不可以善恶论者，十居八九。若一定要论，则当论其果，莫论其心，盖心之为心，不可究问
 :   推特 @pengyuanzhong
 
-一个人, 如果极力宣扬他自己都不信的东西, 那他就是做好了干任何坏事的准备
-:	博客 编程随想 [http://program-think.blogspot.com/2013/03/weekly-share-43.html]() 原话 美利坚开国元勋 托马斯潘恩
+一个人，如果极力宣扬他自己都不信的东西，那他就是做好了干任何坏事的准备
+:	博客 编程随想 [http://program-think.blogspot.com/2013/03/weekly-share-43.html](http://program-think.blogspot.com/2013/03/weekly-share-43.html) 原话 美利坚开国元勋 托马斯潘恩
 
 没有银弹
 :   图书 《人月神话》 第16章 没有银弹

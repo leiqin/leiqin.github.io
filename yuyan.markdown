@@ -1,5 +1,5 @@
 ---
-layout: yuyan
+layout: headercenter
 ---
 
 转载：[http://program-think.blogspot.com/2012/11/political-fable.html](http://program-think.blogspot.com/2012/11/political-fable.html)

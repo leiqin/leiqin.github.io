@@ -1,13 +1,17 @@
 <html>
 	<head>
         {% include common_html_head.html %}
-		<title>{{ page.title }} - 雷钦的博客</title>
+		<title>雷钦的博客</title>
+		<style>
+			h1, h2, h3, h4, h5, h6 {text-align:center;}
+		</style>
 	</head>
 	<body>
         <div id="container">
             {% include header.html %}
             {% include label.html %}
             <div id="content">
+                <h1 class="justcenter">{{ page.title }}</h1>
                 {{ content }}
             </div>
             {% include copyright.html %}

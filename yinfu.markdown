@@ -1,7 +1,10 @@
 ---
-layout: yinfu
-title: 鬼谷子本经阴符七术
+layout: headercenter
 ---
+
+#鬼谷子本经阴符七术
+
+转载：[http://www.quanxue.cn/CT\_DaoJia/GuiGu/GuiGu01.html](http://www.quanxue.cn/CT_DaoJia/GuiGu/GuiGu01.html)
 
 ##盛神法五龙
 
