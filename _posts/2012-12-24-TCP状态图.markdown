@@ -5,6 +5,6 @@ title: TCP 状态图
 
 昨天去参加 [shlug](https://groups.google.com/group/shlug) 15周年技术交流分享活动，[shell](http://shell909090.com/blog/) 提到了 TCP 的状态图，回来搜了一下：
 
-<a width="100%" href="/static/images/Tcp_state_diagram_fixed.svg"><img src="/static/images/Tcp_state_diagram_fixed.png" /></a>
+<a href="/static/images/Tcp_state_diagram_fixed.svg"><img width="100%" src="/static/images/Tcp_state_diagram_fixed.png" /></a>
 图片来源： [维基百科](http://en.wikipedia.org/wiki/File:Tcp_state_diagram_fixed.svg)
 _原图为英文的，做了一些修改，客户端和服务器端的路径只是参考，实际情况更为复杂_
