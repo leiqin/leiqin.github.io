@@ -130,6 +130,9 @@ title: 克雷圣经
 生而未生，化而未化，是为无极
 :	视频 [黄保余讲故事：神算子老道](http://v.youku.com/v_show/id_XNDk5MjIxMzA0.html) 1:50 
 
+机不可设，设则不中
+:	[三十六计](https://zh.wikisource.org/wiki/%E4%B8%89%E5%8D%81%E5%85%AD%E8%A8%88)
+
 * * *
 
 最后再附上 **龙破斩** 的咒文：
