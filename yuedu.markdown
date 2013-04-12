@@ -2,6 +2,10 @@
 layout: index
 ---
 
+#### 哲学
+
+[苏菲的世界](http://book.douban.com/subject/2284311/)
+
 #### 编程观
 
 [人月神话](http://book.douban.com/subject/2230248/)
