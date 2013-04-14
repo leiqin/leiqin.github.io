@@ -131,7 +131,7 @@ title: 克雷圣经
 :	视频 [黄保余讲故事：神算子老道](http://v.youku.com/v_show/id_XNDk5MjIxMzA0.html) 1:50 
 
 天道法于自然，不为善存，不为恶灭
-:	天涯帖子 [走访轩辕氏族与蚩尤三苗之族的种种奇闻真事](http://bbs.tianya.cn/post-16-715507-1.shtml)
+:	天涯帖子 [有关三本书的奇闻真事](http://bbs.tianya.cn/post-16-606649-4.shtml)
 
 机不可设，设则不中
 :	[三十六计](https://zh.wikisource.org/wiki/%E4%B8%89%E5%8D%81%E5%85%AD%E8%A8%88)
