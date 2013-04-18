@@ -100,6 +100,9 @@ title: 克雷圣经
 一个人，如果极力宣扬他自己都不信的东西，那他就是做好了干任何坏事的准备
 :	博客 [编程随想](http://program-think.blogspot.com/2013/03/weekly-share-43.html) 原话 美利坚开国元勋 托马斯潘恩
 
+不知诸侯之谋者，不能豫交
+:	[孙子兵法](https://zh.wikisource.org/wiki/%E5%AD%99%E5%AD%90%E5%85%B5%E6%B3%95#.E8.A1.8C.E8.BB.8D.E7.AC.AC.E4.B9.9D) 军争第七
+
 没有银弹
 :   图书 《人月神话》 第16章 没有银弹
 
