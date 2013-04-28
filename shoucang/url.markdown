@@ -7,3 +7,7 @@ layout: index
 [网页版 Python](http://www.codeskulptor.org)
 
 [程序算法与人生选择](http://coolshell.cn/articles/8790.html)
+
+[美股行情](http://www.freestockcharts.com)
+
+[美股信息](http://www.barchart.com)
