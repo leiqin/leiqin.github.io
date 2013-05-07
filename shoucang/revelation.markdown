@@ -137,7 +137,11 @@ title: 克雷圣经
 :	天涯帖子 [有关三本书的奇闻真事](http://bbs.tianya.cn/post-16-606649-5.shtml)
 
 机不可设，设则不中
-:	[三十六计](https://zh.wikisource.org/wiki/%E4%B8%89%E5%8D%81%E5%85%AD%E8%A8%88)
+:	[三十六计](https://zh.wikisource.org/wiki/%E4%B8%89%E5%8D%81%E5%85%AD%E8%A8%88) (PS: 算尽天机，一命归西)
+
+不管是值的还是不值的，追求自己所喜欢的人，这样世界才精彩啊！！
+:	QQ空间 [幸或不幸](http://user.qzone.qq.com/604616166/blog/1238986796#!app=2&via=QZ.HashRefresh&pos=1238986796)
+
 
 * * *
 
