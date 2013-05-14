@@ -155,3 +155,5 @@ layout: headercenter
 循名而為貴，安而完，名實相生，反相為情，故曰名當則生于實，實生于理，理生于名實之德，德生于和，和生于當。
 
 右主名。
+
+原文地址：[维基文库](https://zh.wikisource.org/wiki/%E9%AC%BC%E8%B0%B7%E5%AD%90)

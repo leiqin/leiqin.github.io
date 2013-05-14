@@ -116,5 +116,5 @@ layout: headercenter
 
 昔殷之兴也，伊挚在夏；周之兴也，吕牙在殷。故明君贤将，能以上智为间者，必成大功。此兵之要，三军之所恃而动也。
 
-转载：[维基文库](https://zh.wikisource.org/wiki/%E5%AD%99%E5%AD%90%E5%85%B5%E6%B3%95#.E8.A1.8C.E8.BB.8D.E7.AC.AC.E4.B9.9D) (PS: 有删节)
+原文地址：[维基文库](https://zh.wikisource.org/wiki/%E5%AD%99%E5%AD%90%E5%85%B5%E6%B3%95) 
 

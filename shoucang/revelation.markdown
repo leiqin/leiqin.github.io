@@ -103,6 +103,9 @@ title: 克雷圣经
 不知诸侯之谋者，不能豫交
 :	[孙子兵法](https://zh.wikisource.org/wiki/%E5%AD%99%E5%AD%90%E5%85%B5%E6%B3%95#.E8.A1.8C.E8.BB.8D.E7.AC.AC.E4.B9.9D) 军争第七
 
+無以人之所不欲而強之于人，無以人之所不知而教之于人
+:	[鬼谷子](https://zh.wikisource.org/wiki/%E9%AC%BC%E8%B0%B7%E5%AD%90) 謀篇第十 
+
 没有银弹
 :   图书 《人月神话》 第16章 没有银弹
 
