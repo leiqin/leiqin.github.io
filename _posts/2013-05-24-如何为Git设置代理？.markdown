@@ -1,0 +1,52 @@
+---
+layout: post
+title: 如何为 Git 设置代理？
+---
+
+[如何为 Git 设置代理？](http://segmentfault.com/q/1010000000118837)
+
+假设代理是本地的，协议是 socks5，端口是 1080 。根据 git 使用的协议：http 、 ssh、 git，代理配置的方法各有不同。
+
+### HTTP 协议
+
+使用 [git 的配置](http://git-scm.com/docs/git-config) http.config
+
+	git config http.config socks5://127.0.0.1:1080
+
+也可以使用环境变量
+
+	export HTTPS_PROXY=socks5://127.0.0.1:1080
+
+git 的配置可以是全局的，也可以根据不同的仓库进行配置，环境变量只能全局使用，否则就需要在每次使用 git 的时候用 env ：
+
+	env HTTPS_PROXY=socks5://127.0.0.1:1080 git pull
+
+如果需要根据不同的 remote 使用不同的代理，可以使用 remote.\<name\>.proxy
+
+### SSH 协议
+
+修改 ssh 的配置文件 .ssh/config
+
+	Host bitbucket.org
+		ProxyCommand nc -X 5 -x 127.0.0.1:1080 %h %p
+
+这样链接到 [bitbucket.org](https://bitbucket.org) 的 ssh 都会使用 socks5://127.0.0.1:1080 的代理，ssh 的配置可以参考 `man ssh_config` ，nc 命令的使用可以参考 `man nc` 。
+
+SSH 协议的代理可以是全局的（去掉 Host 那行就行了），也可以针对某个网站，但不能针对某个仓库配置。
+
+### GIT 协议
+
+给 GIT 协议配置代理需要写一个脚本，比如脚本的名字叫： git\_proxy
+
+	#!/bin/sh
+	nc -X 5 -x 127.0.0.1:1080 "$@"
+
+然后使用 core.gitproxy 进行配置：
+
+	git config core.gitproxy /path/to/git_proxy
+
+它可以配成全局的，也可以配成各个仓库自己的，还可以使用：
+
+	git config core.gitproxy '/path/to/git_proxy for bitbucket.org'
+
+配置成针对 bitbucket.org 这个网站的。
