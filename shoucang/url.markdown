@@ -21,3 +21,5 @@ layout: index
 [NYSE](http://usequities.nyx.com/markets/nyse-equities/trading-fees)
 
 [NASDAQ](http://www.nasdaqtrader.com/Trader.aspx?id=PriceListTrading2)
+
+[sterling](http://www.sterlingtrader.com/chinese/Execution_Destinations/execution_destinations.html)
