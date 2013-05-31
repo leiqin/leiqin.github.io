@@ -1,12 +1,12 @@
 img {border: none;}
 p {text-indent: 2em;}
 a {text-decoration: none;}
-h1 {font-size: 260%; color: #000000;}
-h2 {font-size: 220%; color: #404040;}
-h3 {font-size: 180%; color: #707070;}
-h4 {font-size: 140%; color: #909090;}
-h5 {font-size: 130%; color: #989898;}
-h6 {font-size: 120%; color: #9c9c9c;}
+h1 {font-size: 260%; line-height: 130%; color: #000000;}
+h2 {font-size: 220%; line-height: 130%; color: #404040;}
+h3 {font-size: 180%; line-height: 130%; color: #707070;}
+h4 {font-size: 140%; line-height: 130%; color: #909090;}
+h5 {font-size: 130%; line-height: 130%; color: #989898;}
+h6 {font-size: 120%; line-height: 130%; color: #9c9c9c;}
 
 body {
     margin: 0pt; 
@@ -36,6 +36,7 @@ table > caption {
 
 dt {
 	font-size: 110%;
+	line-height: 130%;
 	padding: 0.5em;
 }
 
@@ -53,6 +54,7 @@ dd {
 
 #container {
     width: 80%;
+	//min-width: 600px;
     margin-left: auto;
     margin-right: auto;
     background: #dddddd;
@@ -67,6 +69,7 @@ dd {
 #header-title {
     text-indent: 0;
     font-size: 200%;
+	line-height:130%;
     font-weight: bold; 
 }
 
