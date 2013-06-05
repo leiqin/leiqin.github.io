@@ -22,6 +22,7 @@ pre {
     background-color: #f0f0f0;
     font-family: monospace;
     margin-left: 2em; 
+	overflow: auto;
 }
 
 table, tr, td, th {
