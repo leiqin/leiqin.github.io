@@ -153,5 +153,12 @@ a.index:hover {
 }
 
 #googlecustomsearch input[type=submit] {
-    display: none;
+	background: url("/static/images/search.png");
+	border: medium none;
+	cursor: pointer;
+	position: relative;
+	top: -7px;
+	left: -35px;
+	width: 16px;
+	height: 16px;
 }
