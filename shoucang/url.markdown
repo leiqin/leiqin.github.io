@@ -2,6 +2,12 @@
 layout: index
 ---
 
+[政治才是兩岸協議的關鍵](http://billy3321.blogspot.ru/2013/07/blog-post_15.html)
+
+[民主不是多數暴力](http://billy3321.blogspot.ru/2013/07/blog-post.html)
+
+[華人文化傳統的惡性循環](http://billy3321.blogspot.ru/2013/03/chineseCulture.html)
+
 [公开课](https://www.coursera.org/)
 
 [美股行情](http://www.freestockcharts.com)
