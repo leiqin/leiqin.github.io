@@ -6,6 +6,10 @@ layout: index
 
 [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
+[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
+
+[JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+
 [公开课](https://www.coursera.org/)
 
 [程序算法与人生选择](http://coolshell.cn/articles/8790.html)
