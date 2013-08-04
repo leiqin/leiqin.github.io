@@ -10,6 +10,10 @@ layout: index
 
 [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
 
+[贝叶斯：定理简介](http://www.ruanyifeng.com/blog/2011/08/bayesian_inference_part_one.html)
+
+[贝叶斯：过滤垃圾邮件](http://www.ruanyifeng.com/blog/2011/08/bayesian_inference_part_two.html)
+
 [公开课](https://www.coursera.org/)
 
 [程序算法与人生选择](http://coolshell.cn/articles/8790.html)
