@@ -1,0 +1,54 @@
+---
+layout: post
+title: 终于知道怎么处理 Linux 下 zip 解压 文件名乱码的问题了
+---
+
+在 windows 下打包的 zip 文件，文件名是以 GBK 的方式编码的，在 Linux 下解压会出现文件名乱码的问题，我以前使用 [用 wine 安装 7z](http://blog.leiqin.name/2012/04/21/%E4%BB%8E%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85wine.html) 的方法来解决这个问题。
+
+现在在 [debian 的邮件列表](http://lists.debian.org/) 里看到了这个解决方案：[zip解压乱码](http://lists.debian.org/debian-chinese-gb/2013/08/msg00009.html) 
+
+用 7z 在 LANG=C 的环境下解压 zip 文件：
+
+	LANG=C 7z x zipfile.zip
+
+测试文件名的编码转换，查看是否有乱码 (PS: 只需要关注转换后的文件名是否有乱码，不需要关注目录名)：
+
+	convmv -f cp936 -t utf8 -r -- *
+
+如果没有乱码，就进行实际的转换：
+
+	convmv -f cp936 -t utf8 -r --notest -- *
+
+如果还需要转换某个文件的编码：
+
+	iconv -f cp936 -t utf8 -o output.txt input.txt
+
+比如，对于[这个文件](/static/other/%E6%B5%8B%E4%B8%80%E6%B5%8B.zip)输出如下：
+
+	$ LANG=C 7z x 测一测.zip 
+	Processing archive: 测一测.zip
+	Extracting  ���
+				   Extracting  ����ĵ�.txt
+	Everything is Ok
+
+	$ convmv -f cp936 -t utf8 -r -- *
+	Starting a dry run without changes...
+	mv "����ĵ�.txt" "���我的文档.txt"
+	mv "./���       "./测一测"
+	Skipping, already UTF-8: ./测一测.zip
+	No changes to your files done. Use --notest to finally rename the files.
+
+	$ convmv -f cp936 -t utf8 -r --notest -- *
+	mv "����ĵ�.txt" "���我的文档.txt"
+	mv "./���       "./测一测"
+	Skipping, already UTF-8: ./测一测.zip
+	Ready!
+
+	$ tree
+	.
+	├── 测一测
+	│   └── 我的文档.txt
+	└── 测一测.zip
+
+	$ iconv -f cp936 -t utf8 测一测/我的文档.txt 
+	你好，世界！
