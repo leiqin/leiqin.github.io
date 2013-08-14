@@ -10,6 +10,8 @@ layout: index
 
 [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
 
+[6 Things You Should Know About Fragment URLs](http://blog.httpwatch.com/2011/03/01/6-things-you-should-know-about-fragment-urls/)
+
 [贝叶斯：定理简介](http://www.ruanyifeng.com/blog/2011/08/bayesian_inference_part_one.html)
 
 [贝叶斯：过滤垃圾邮件](http://www.ruanyifeng.com/blog/2011/08/bayesian_inference_part_two.html)
