@@ -1,5 +1,6 @@
 ---
 layout: headercenter
+title: 寓言故事
 ---
 
 转载：[http://program-think.blogspot.com/2012/11/political-fable.html](http://program-think.blogspot.com/2012/11/political-fable.html)

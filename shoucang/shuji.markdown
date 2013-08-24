@@ -1,5 +1,6 @@
 ---
-layout: index
+layout: list
+title: 书籍
 ---
 
 #### 哲学

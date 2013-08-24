@@ -1,5 +1,6 @@
 ---
 layout: headercenter
+title: 鬼谷子
 ---
 
 # 鬼谷子

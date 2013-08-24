@@ -1,5 +1,6 @@
 ---
 layout: headercenter
+title: 孙子兵法
 ---
 
 # 孙子兵法

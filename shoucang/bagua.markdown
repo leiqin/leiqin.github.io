@@ -1,5 +1,6 @@
 ---
 layout: index
+title: 八卦
 ---
 
 <div style="width:100%;text-align:center;;vertical-align:middle">

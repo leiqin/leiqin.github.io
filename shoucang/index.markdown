@@ -1,5 +1,6 @@
 ---
 layout: index
+title: 收藏
 ---
 
 [克雷圣经](./revelation.html)

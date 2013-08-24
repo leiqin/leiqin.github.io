@@ -1,8 +1,9 @@
 ---
-layout: index
+layout: list
+title: URL收藏
 ---
 
-### 资源
+#### 资源
 
 [公开课](https://www.coursera.org/)
 
@@ -16,7 +17,7 @@ layout: index
 
 [Debian Popular](http://popcon.debian.org/)
 
-### 美股
+#### 美股
 
 [美股行情](http://www.freestockcharts.com)
 
@@ -36,7 +37,7 @@ layout: index
 
 [sterling](http://www.sterlingtrader.com/chinese/Execution_Destinations/execution_destinations.html)
 
-### 其他
+#### 其他
 
 [程序算法与人生选择](http://coolshell.cn/articles/8790.html)
 

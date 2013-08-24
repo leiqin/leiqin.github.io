@@ -3,29 +3,28 @@
         {% include common_html_head.html %}
 		<script>
 			$(document).ready(function(){
-				$('#content dt').css('cursor', 'pointer');
-				$('#content dd').hide();
-				$('#content dt').each(function(){
+				$('#content h4').css('cursor', 'pointer');
+				$('#content p').hide();
+				$('#content h4').each(function(){
 					$(this).click(function(){
-						//$(this).next().toggle();
-						$(this).next('dd').slideToggle();
+						$(this).nextUntil('h4', 'p').toggle();
+						//$(this).nextAll('p').toggle();
 					})
 				});
-				$('#content dl').prepend('<div class="right"><span class="dd-show">展开</span> <span class="dd-hide">折叠</span></div>');
-				$('#content dl .dd-show')
+				$('#content').prepend('<div class="right"><span class="p-show">展开</span> <span class="p-hide">折叠</span></div>');
+				$('#content .p-show')
 					.css('cursor', 'pointer').css('color', 'grey')
 					.click(function(){
-						$(this).parents('dl').find('dd').show();
+						$('#content').find('p').show();
 					});
-				$('#content dl .dd-hide')
+				$('#content .p-hide')
 					.css('cursor', 'pointer').css('color', 'grey')
 					.click(function(){
-						$(this).parents('dl').find('dd').hide();
+						$('#content').find('p').hide();
 					});
 			});
 		</script>
 		<style>
-			#content dt{font-size:150%;line-height:130%;}
 		</style>
 	</head>
 	<body>

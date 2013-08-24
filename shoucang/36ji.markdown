@@ -1,5 +1,6 @@
 ---
 layout: headercenter
+title: 三十六计
 ---
 
 # 三十六計

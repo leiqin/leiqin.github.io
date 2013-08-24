@@ -1,5 +1,6 @@
 ---
 layout: headercenter
+title: 道德经
 ---
 
 # 道德经

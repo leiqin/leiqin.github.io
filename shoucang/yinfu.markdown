@@ -1,5 +1,6 @@
 ---
 layout: headercenter
+title: 阴符七术
 ---
 
 # 本经阴符七术
