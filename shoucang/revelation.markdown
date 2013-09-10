@@ -184,6 +184,9 @@ title: 克雷圣经
 选择吧，无论做何选择，其对应的结果，任何人都不可能预见到，所以，你就尽量选一个自己不会留下悔恨的做法吧！
 :	动漫 《进击的巨人》 第20集 6:20
 
+莫装逼，装逼被雷劈
+:	邮件列表 [shlug](https://groups.google.com/forum/#!searchin/shlug/%E6%9C%89%E6%B2%A1%E6%9C%89%E4%BA%BA%E5%9C%A8%E5%81%9A%E5%9F%BA%E4%BA%8EHadoop%E7%9A%84%E9%A1%B9%E7%9B%AE%7Csort:relevance/shlug/9j30LL3qCSA/gd1hisvtjcMJ)
+
 * * *
 
 最后再附上 **龙破斩** 的咒文：
