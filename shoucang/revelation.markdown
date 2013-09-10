@@ -187,6 +187,9 @@ title: 克雷圣经
 莫装逼，装逼被雷劈
 :	邮件列表 [shlug](https://groups.google.com/forum/#!searchin/shlug/%E6%9C%89%E6%B2%A1%E6%9C%89%E4%BA%BA%E5%9C%A8%E5%81%9A%E5%9F%BA%E4%BA%8EHadoop%E7%9A%84%E9%A1%B9%E7%9B%AE%7Csort:relevance/shlug/9j30LL3qCSA/gd1hisvtjcMJ)
 
+势不可去尽，话不可说尽，凡事太尽，缘分势必早尽
+:	电影 《风云雄霸天下》(1998) 116:58
+
 * * *
 
 最后再附上 **龙破斩** 的咒文：
