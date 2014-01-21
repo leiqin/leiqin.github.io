@@ -17,7 +17,6 @@ title: URL收藏
 
 [Debian Popular](http://popcon.debian.org/)
 
-[HTTP Cache Headers](http://www.mobify.com/blog/beginners-guide-to-http-cache-headers/)
 
 #### 美股
 
@@ -39,6 +38,7 @@ title: URL收藏
 
 [sterling](http://www.sterlingtrader.com/chinese/Execution_Destinations/execution_destinations.html)
 
+
 #### 其他
 
 [程序算法与人生选择](http://coolshell.cn/articles/8790.html)
@@ -53,4 +53,6 @@ title: URL收藏
 
 [PulseAudio,ESD和ALSA,OSS的关系](http://forum.ubuntu.org.cn/viewtopic.php?t=163776)
 
-[你都不相信警方，你相信谁？](http://www.my1510.cn/article.php?id=104194&utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+my1510recommded+%28tuijian%29)
+[分布式系统的事务处理](http://coolshell.cn/articles/10910.html)
+
+[HTTP Cache Headers](http://www.mobify.com/blog/beginners-guide-to-http-cache-headers/)
