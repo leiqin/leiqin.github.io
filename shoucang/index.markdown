@@ -7,4 +7,6 @@ title: 收藏
 
 [阴符七术](./yinfu.html)
 
+[道德经](./daodejing.html)
+
 [寓言故事](./yuyan.html)
