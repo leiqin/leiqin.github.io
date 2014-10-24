@@ -54,8 +54,9 @@ dd {
 .justcenter { text-align: center; }
 
 #container {
-    width: 80%;
-	//min-width: 600px;
+    width: 100%;
+	max-width: 1024px;
+	min-width: 255px;
     margin-left: auto;
     margin-right: auto;
     background: #dddddd;
@@ -148,8 +149,8 @@ a.index:hover {
     border-radius: 3px;
     padding-left: 6px;
     position: relative;
-    top: -10px;
-    left: -10px;
+    //top: -10px;
+    //left: -10px;
 }
 
 #googlecustomsearch input[type=submit] {
@@ -157,8 +158,8 @@ a.index:hover {
 	border: medium none;
 	cursor: pointer;
 	position: relative;
-	top: -7px;
-	left: -35px;
+	//top: -7px;
+	left: -30px;
 	width: 16px;
 	height: 16px;
 }
