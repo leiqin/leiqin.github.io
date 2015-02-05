@@ -9,4 +9,6 @@ title: 收藏
 
 [道德经](./daodejing.html)
 
+[鬼谷子](./guiguzi.html)
+
 [寓言故事](./yuyan.html)
