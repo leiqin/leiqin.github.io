@@ -1,7 +1,6 @@
-auto: true
 safe: true
 lsi: false
-pygments: true
+hightlighter: pygments
 permalink: /:year/:month/:day/:title.html
 paginate: 10
 markdown: kramdown
