@@ -1,0 +1,23 @@
+---
+layout: post
+title: 谷歌宣布全线产品吊销CNNIC根证书（转载）
+---
+
+转载：[月光博客](http://www.williamlong.info/archives/4192.html)
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
+
+
+谷歌在其安全博客上发布[声明](http://googleonlinesecurity.blogspot.com/2015/03/maintaining-digital-certificate-security.html)，经过谷歌对CNNIC证书事件的调查，谷歌将会在旗下所有产品里删除对CNNIC证书的信任，在过渡期内，现有的CNNIC用户将以白名单方式继续使用CNNIC证书一段时间。
+
+早先，埃及的证书机构MCS集团发布了针对谷歌域名的假证书，而这些证书都是由CNNIC颁发的，据信这些假证书可能被用于中间人代理，拦截用户和目标网站的加密信息。
+
+谷歌表示，如果CNNIC实施技术及流程改进杜绝此前发生的证书伪造事件，可以重新申请加入。现有CNNIC证书客户将暂时以白名单形式继续支持一段时间作为过渡。
+
+在谷歌宣布旗下产品删除CNNIC根证书之后，CNNIC发表[声明回应](http://www.cnnic.net.cn/gywm/xwzx/xwzxtzgg/201504/t20150402_52050.htm)。声明称，CNNIC对谷歌公司做出的决定表示难以理解和接受，并敦促谷歌公司充分考虑和保障用户权益。CNNIC将切实保障已有用户的使用不受影响。
+
+谷歌产品吊销CNNIC根证书对用户的影响
+
+在过渡期内，对已经发布的CNNIC证书，谷歌产品会继续支持，在谷歌下个版本的产品更新后，使用Chrome的用户将不再信任CNNIC证书，无法访问使用该证书的网站，谷歌原生Android用户使用内置浏览器也会出现同样效果。鉴于目前使用CNNIC证书的网站并不多，且使用Chrome浏览器的中国用户并不占主流，因此该事件对中国用户并无太大影响。
+
+参考资料：中国互联网络信息中心（China Internet Network Information Center，缩写为CNNIC），是经中华人民共和国国务院主管部门批准，于1997年6月3日成立的互联网管理和服务机构。中国互联网络信息中心成立伊始，由中国科学院主管；2014年末，改由中央网络安全和信息化领导小组办公室、国家互联网信息办公室主管。
