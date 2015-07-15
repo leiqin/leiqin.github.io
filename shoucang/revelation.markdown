@@ -262,6 +262,9 @@ title: 克雷圣经
 学我者生，似我者死
 :	齐白石
 
+自强的第一步，就是 「不自欺」
+:	Coursera [中國古代歷史與人物－－秦始皇](https://www.coursera.org/course/chinesehistory) 7-2 秦之衰：孝公的選擇 10:40
+
 * * *
 
 最后再附上 **龙破斩** 的咒文：
