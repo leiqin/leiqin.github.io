@@ -9,4 +9,4 @@ Blog: [http://blog.leiqin.info](http://blog.leiqin.info)
 
 Github: [https://github.com/leiqin](https://github.com/leiqin)
 
-Coursera: [Signature Track](./coursera.html)
+Coursera: [Accomplishments](./coursera.html)
