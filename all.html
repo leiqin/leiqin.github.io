@@ -1,0 +1,7 @@
+---
+layout: index
+---
+{% for post in site.posts %}
+<h4><a class="index" href="{{ post.url }}">{{ post.title }}</a></h4>
+{{ post.date | date: "%Y-%m-%d"}}
+{% endfor %}
