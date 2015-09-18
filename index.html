@@ -5,6 +5,10 @@ layout: index
 <h2><a class="index" href="{{ post.url }}">{{ post.title }}</a></h2>
 {{ post.date | date: "%Y-%m-%d"}}
 {% endfor %}
+<div style="margin-top:1em">
+<div style="display:inline">
+<a href="/all.html">All</a>
+</div>
 <div class="right">
     {% if paginator.previous_page == 1 %}
     <a href="/">上一页</a>
@@ -14,4 +18,5 @@ layout: index
     {% if paginator.next_page %}
     <a href="/page{{ paginator.next_page}}">下一页</a>
     {% endif %}
+</div>
 </div>
