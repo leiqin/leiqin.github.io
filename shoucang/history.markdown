@@ -1,0 +1,36 @@
+---
+layout: index
+title: 以史为镜
+---
+
+以史为镜，可以知兴替。这道理谁都懂，然而并没有什么卵用。大部分和历史有关的著作对我而言，要么枯燥、乏味实在是读不下去；要么离奇、玄幻实在是无以为镜。这里收集了那些我读过，而且读得下去的和历史有关的书籍、视频，以供参考。另外引用下面某一课程的一位老师的话：所有的书都是沙金，你要懂得从沙金里淘金子，而不是只会从沙金里挑沙子。
+
+### 图书
+
+[你一定爱读的极简欧洲史](http://book.douban.com/subject/5366248/) 约翰·赫斯特
+:	对欧州从古希腊罗马到文艺复兴、启蒙运动的历史有一个基本概念
+
+[中国史纲](http://book.douban.com/subject/1055347/) 张荫麟 
+:	从周到汉，通俗易懂
+
+[易中天中华史](http://book.douban.com/subject/25819260/) 易中天 
+:	从女娲、伏羲，目前写到魏晋南北朝 有点中二，干货不少
+
+[乌合之众](http://book.douban.com/subject/1012611/) 古斯塔夫.勒庞 
+:	描述了法国大革命后期，法国人的群体心理
+
+[格林斯潘回忆录](http://book.douban.com/subject/2326066/) 格林斯潘
+:	前美联储主席与世界经济和美国总统的爱恨情仇 该书有中文版的
+
+### [Coursera 公开课](https://www.coursera.org/)
+
+[中國古代歷史與人物－－秦始皇](https://www.coursera.org/course/chinesehistory) 台湾大学 吕世浩
+:	始皇的祖先、一生、子孫、臣子
+
+[史記（一）](https://www.coursera.org/course/shiji) 台湾大学 吕世浩
+:	究天人之際，通古今之變，成一家之言
+
+### [网易公开课](http://open.163.com/)
+
+[耶鲁大学公开课：美国独立战争](http://open.163.com/special/opencourse/americanrevolution.html) Joanne B.Freeman
+:	战争结束了，革命还在继续
