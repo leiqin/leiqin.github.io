@@ -28,9 +28,9 @@ title: 以史为镜
 :	始皇的祖先、一生、子孫、臣子
 
 [史記（一）](https://www.coursera.org/course/shiji) 台湾大学 吕世浩
-:	究天人之際，通古今之變，成一家之言
+:	吕世浩带你读史记 太史公自序、報任少卿書、五帝本紀、吳太伯世家、伯夷列傳
 
 ### [网易公开课](http://open.163.com/)
 
 [耶鲁大学公开课：美国独立战争](http://open.163.com/special/opencourse/americanrevolution.html) Joanne B.Freeman
-:	国会从1774年到1787年间所采取的每一项政策都经历了尖锐的争议，表决时也只有微弱的优势
+:	国会从1774年到1787年间所采取的每一项政策都经历了尖锐的争议
