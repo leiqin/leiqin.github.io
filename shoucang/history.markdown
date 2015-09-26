@@ -33,4 +33,4 @@ title: 以史为镜
 ### [网易公开课](http://open.163.com/)
 
 [耶鲁大学公开课：美国独立战争](http://open.163.com/special/opencourse/americanrevolution.html) Joanne B.Freeman
-:	国会从1774年到1787年间所采取的每一项政策都经历了尖锐的争议，并由微弱的多数所决定
+:	美国独立战争的起因之一是北美英属殖民地的人为了捍卫他们作为英国公民的权利
