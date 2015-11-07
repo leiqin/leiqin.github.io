@@ -25,6 +25,9 @@ title: 以史为镜
 [思痛录](http://book.douban.com/subject/1089250/) 韦君宜
 :	老共产党员韦君宜晚年的回忆录 
 
+[储安平与《观察》](http://book.douban.com/subject/1424797/) 谢泳 [储安平与“党天下”](http://book.douban.com/subject/1938305/) 戴晴
+:	老报人储安平与他的报刊
+
 ### [Coursera 公开课](https://www.coursera.org/)
 
 [中國古代歷史與人物－－秦始皇](https://www.coursera.org/course/chinesehistory) 台湾大学 吕世浩
