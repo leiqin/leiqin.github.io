@@ -283,6 +283,9 @@ title: 克雷圣经
 任何一个共和国政府应该尽己所能来保持公民的权利意识
 :	网易公开课 [耶鲁大学公开课：美国独立战争](http://open.163.com/special/opencourse/americanrevolution.html) 第24集 一个国家的诞生 31:30
 
+甘愿做奴隶的人就应该被奴役
+:	尼采 [《逝去的年代》](http://book.douban.com/subject/1453120/) 开篇语
+
 * * *
 
 最后再附上 **龙破斩** 的咒文：
