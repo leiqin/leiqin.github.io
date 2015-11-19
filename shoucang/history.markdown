@@ -28,6 +28,9 @@ title: 以史为镜
 [储安平与《观察》](http://book.douban.com/subject/1424797/) 谢泳 [储安平与“党天下”](http://book.douban.com/subject/1938305/) 戴晴
 :	老报人储安平与他的报刊
 
+[中国基层选举报告](http://book.douban.com/subject/4007007/) 魏荣汉
+:	早在1995年到2003年中国山西农村就开始推行民主选举，虽历尽波折，但确实可行
+
 ### [Coursera 公开课](https://www.coursera.org/)
 
 [中國古代歷史與人物－－秦始皇](https://www.coursera.org/course/chinesehistory) 台湾大学 吕世浩
