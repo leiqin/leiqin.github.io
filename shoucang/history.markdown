@@ -34,6 +34,9 @@ title: 以史为镜
 [历史深处的民国 壹 晚清](http://book.douban.com/subject/26022213/) [贰 共和](http://book.douban.com/subject/26290480/) [叁 重生](http://book.douban.com/subject/26617662/) 江城
 :	晚清到民国 通俗易懂，干货很多
 
+[极简中国史](http://book.douban.com/subject/25815011/) 勒内·格鲁塞 
+:	一个外国人眼中的中国历史
+
 ### [Coursera 公开课](https://www.coursera.org/)
 
 [中國古代歷史與人物－－秦始皇](https://www.coursera.org/course/chinesehistory) 台湾大学 吕世浩
