@@ -11,6 +11,10 @@ title: 关于
 
 <a href="./static/mooc/Coursera ml 2015.pdf"><img src="./static/mooc/Machine Learning.png"/></a>
 
+[機器學習基石](https://www.coursera.org/course/ntumlone)
+
+<a href="https://www.coursera.org/account/accomplishments/records/LvqsSfcHnzLYDDgf"><img src="./static/mooc/Machine Learning Foundations.png"/></a>
+
 [Calculus One](https://www.coursera.org/learn/calculus1)
 
 ![](./static/mooc/Calculus One.png)
