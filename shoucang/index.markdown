@@ -7,10 +7,4 @@ title: 收藏
 
 [以史为镜](./history.html)
 
-[阴符七术](./yinfu.html)
-
-[道德经](./daodejing.html)
-
-[鬼谷子](./guiguzi.html)
-
-[寓言故事](./yuyan.html)
+[启蒙读物](./enlightenment.html)
