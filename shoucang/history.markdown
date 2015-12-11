@@ -56,5 +56,5 @@ title: 以史为镜
 [耶鲁大学公开课：古希腊历史简介](http://open.163.com/special/sp/introductiontoancientgreekhistory.html) Donald Kagan
 :	不能因为未来的历史事实而否认当时事态发展的可能性。不能因为后来罗马和基督教的辉煌历史，就认为古地中海区域的统一是未来的趋势。 --- 这位老师有一些西方至上论，就好像有的中国学者有一些中国至上论一样。
 
-[耶鲁大学公开课：中世纪早期史](http://open.163.com/special/opencourse/earlymiddleages.html) Donald Kagan
+[耶鲁大学公开课：中世纪早期史](http://open.163.com/special/opencourse/earlymiddleages.html) Paul Freedman
 :	从罗马帝国后期到公元1000年左右，基督教和伊斯兰教在这个时期崛起。
