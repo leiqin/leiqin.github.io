@@ -34,6 +34,9 @@ title: 以史为镜
 [极简中国史](http://book.douban.com/subject/25815011/) 勒内·格鲁塞 
 :	一个外国人眼中的中国历史
 
+[论中国](http://book.douban.com/subject/19920715/) 亨利·基辛格
+:	美国前国务卿回忆与中国的外交发展
+
 ### [Coursera 公开课](https://www.coursera.org/)
 
 [中國古代歷史與人物－－秦始皇](https://www.coursera.org/course/chinesehistory) 台湾大学 吕世浩
