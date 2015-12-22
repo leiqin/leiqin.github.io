@@ -28,6 +28,9 @@ title: 以史为镜
 [中国基层选举报告](http://book.douban.com/subject/4007007/) 魏荣汉
 :	早在1995年到2003年中国山西农村就开始推行民主选举，虽历尽波折，但确实可行
 
+[中国农民调查](http://book.douban.com/subject/1051363/)  陈桂棣 春桃 
+:	20世纪90年代中国农民生存状况 和 一种与《中国基层选举报告》截然不同的解决方案
+
 [历史深处的民国 壹 晚清](http://book.douban.com/subject/26022213/) [贰 共和](http://book.douban.com/subject/26290480/) [叁 重生](http://book.douban.com/subject/26617662/) 江城
 :	晚清到民国 通俗易懂，干货很多
 
