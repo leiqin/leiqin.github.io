@@ -40,6 +40,9 @@ title: 以史为镜
 [论中国](http://book.douban.com/subject/19920715/) 亨利·基辛格
 :	美国前国务卿回忆与中国的外交发展
 
+[纳粹德国的腐败和反腐](http://product.dangdang.com/23750051.html) 弗兰克·巴约尔
+:	一个德国人反思纳粹时期的腐败和反腐
+
 ### [Coursera 公开课](https://www.coursera.org/)
 
 [中國古代歷史與人物－－秦始皇](https://www.coursera.org/course/chinesehistory) 台湾大学 吕世浩
