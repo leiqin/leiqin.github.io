@@ -43,6 +43,9 @@ title: 以史为镜
 [纳粹德国的腐败和反腐](http://product.dangdang.com/23750051.html) 弗兰克·巴约尔
 :	一个德国人反思纳粹时期的腐败和反腐
 
+[走出帝制](http://cn.nytimes.com/culture/20151229/cc29qinhui/) 秦晖
+:	近年来（2015）知识界对 晚清以来之变 的反思与讨论
+
 ### [Coursera 公开课](https://www.coursera.org/)
 
 [中國古代歷史與人物－－秦始皇](https://www.coursera.org/course/chinesehistory) 台湾大学 吕世浩
