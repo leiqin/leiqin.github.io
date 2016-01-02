@@ -43,8 +43,11 @@ title: 以史为镜
 [纳粹德国的腐败和反腐](http://product.dangdang.com/23750051.html) 弗兰克·巴约尔
 :	一个德国人反思纳粹时期的腐败和反腐
 
-[走出帝制](http://cn.nytimes.com/culture/20151229/cc29qinhui/) 秦晖
+[走出帝制](http://cn.nytimes.com/china/20151207/c07chinaconstitution/) 秦晖
 :	近年来（2015）知识界对 晚清以来之变 的反思与讨论
+
+[明朝那些事儿](http://book.douban.com/subject/7163250/)  当年明月 
+:	通俗历史，了解明朝的经典制作 小说笔法，诙谐幽默，有点罗嗦
 
 ### [Coursera 公开课](https://www.coursera.org/)
 
