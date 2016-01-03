@@ -49,6 +49,9 @@ title: 以史为镜
 [明朝那些事儿](http://book.douban.com/subject/7163250/)  当年明月 
 :	通俗历史，了解明朝的经典之作 小说笔法，诙谐幽默，有点罗嗦
 
+[延安日記](http://book.douban.com/subject/5381811/) 彼得‧弗拉基米洛夫
+:	共产国际代表记录 1942-1945 年的延安 日记形式，有些琐碎
+
 ### [Coursera 公开课](https://www.coursera.org/)
 
 [中國古代歷史與人物－－秦始皇](https://www.coursera.org/course/chinesehistory) 台湾大学 吕世浩
