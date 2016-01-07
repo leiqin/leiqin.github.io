@@ -11,14 +11,14 @@
 						$(this).next('dd').slideToggle();
 					})
 				});
-				$('#content dl').prepend('<div class="right"><span class="dd-show">展开</span> <span class="dd-hide">折叠</span></div>');
+				$('#content dl').prepend('<div class="right"><span class="dd-show button-link">展开</span> <span class="dd-hide button-link">折叠</span></div>');
 				$('#content dl .dd-show')
-					.css('cursor', 'pointer').css('color', 'grey')
+					.css('cursor', 'pointer').css('color', 'white')
 					.click(function(){
 						$(this).parents('dl').find('dd').show();
 					});
 				$('#content dl .dd-hide')
-					.css('cursor', 'pointer').css('color', 'grey')
+					.css('cursor', 'pointer')
 					.click(function(){
 						$(this).parents('dl').find('dd').hide();
 					});

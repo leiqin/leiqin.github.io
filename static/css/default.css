@@ -163,3 +163,13 @@ a.index:hover {
 	width: 16px;
 	height: 16px;
 }
+
+.button-link {
+	color: #fff;
+	background: #7fc7af;
+	padding: 0.375em 0.8em;
+}
+
+.button-link:hover {
+	background: #b9b9b9;
+}
