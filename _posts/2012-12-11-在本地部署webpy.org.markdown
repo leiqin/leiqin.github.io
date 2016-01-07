@@ -51,7 +51,7 @@ title: 在本地部署 webpy.org
         LanguagePriority en zh-cn
     </Directory>
 
-###P.S. 2013-03-05
+### P.S. 2013-03-05
 
 这个其实也可以用 mod\_rewrite 来实现：
 

@@ -19,29 +19,29 @@ title: 进程、线程和协程的理解
 
 一个实际一点的例子：[thread.py](https://gitcafe.com/leiqin/JustForFun/raw/master/python/gevent/thread.py)
 
-    {% highlight python %}
-    #!/usr/bin/python
-    # python thread.py
-    # python -m gevent.monkey thread.py
+{% highlight python %}
+#!/usr/bin/python
+# python thread.py
+# python -m gevent.monkey thread.py
 
-    import threading
+import threading
 
-    class Thread(threading.Thread):
+class Thread(threading.Thread):
 
-        def __init__(self, name):
-            threading.Thread.__init__(self)
-            self.name = name
+	def __init__(self, name):
+		threading.Thread.__init__(self)
+		self.name = name
 
-        def run(self):
-            for i in xrange(10):
-                print self.name
+	def run(self):
+		for i in xrange(10):
+			print self.name
 
-    threadA = Thread("A")
-    threadB = Thread("B")
+threadA = Thread("A")
+threadB = Thread("B")
 
-    threadA.start()
-    threadB.start()
-    {% endhighlight %}
+threadA.start()
+threadB.start()
+{% endhighlight %}
 
 运行：
 
@@ -59,23 +59,23 @@ title: 进程、线程和协程的理解
 
 再看一个协程的例子：[gr.py](https://gitcafe.com/leiqin/JustForFun/raw/master/python/greenlet/gr.py)
 
-    {% highlight python %}
-    #!/usr/bin/python
-    # python gr.py
+{% highlight python %}
+#!/usr/bin/python
+# python gr.py
 
-    import greenlet
+import greenlet
 
-    def run(name, nextGreenlets):
-        for i in xrange(10):
-            print name
-        if nextGreenlets:
-            nextGreenlets.pop(0).switch(chr(ord(name) + 1), nextGreenlets)
+def run(name, nextGreenlets):
+	for i in xrange(10):
+		print name
+	if nextGreenlets:
+		nextGreenlets.pop(0).switch(chr(ord(name) + 1), nextGreenlets)
 
-    greenletA = greenlet.greenlet(run)
-    greenletB = greenlet.greenlet(run)
+greenletA = greenlet.greenlet(run)
+greenletB = greenlet.greenlet(run)
 
-    greenletA.switch('A', [greenletB])
-    {% endhighlight %}
+greenletA.switch('A', [greenletB])
+{% endhighlight %}
 
 [greenlet](http://pypi.python.org/pypi/greenlet/) 是 python 的协程实现。
 
