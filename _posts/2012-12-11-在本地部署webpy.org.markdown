@@ -14,6 +14,8 @@ title: 在本地部署 webpy.org
     cd webpy.github.com
     jekyll --server 8080
 
+<!--more-->
+
 访问首页正常，但是访问 install 页面时，提示 _Not Found_ ，页面请求的 URL 是： http://localhost:8080/install ，而实际的文件是 install.html 。文件有后缀名，而 URL 里没有，可是在 github 上，或者说是 webpy 的主页上，是正常的，URL 里也没有后缀，但可以看到页面，怎么回事呢？
 
 通过搜索，我了解到 Apache 有一个选项叫做 MultiViews 可以智能的选择资源的后缀名，我决定尝试一下。

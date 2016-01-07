@@ -7,89 +7,92 @@ title: 使用 vimwiki 写博客
 
 普通模式下 `\ww` 可以进入 wiki 的主页， `\w\w` 可以写当天的日记，它会在 wiki 的目录下生成一个 diary/yyyy-MM-dd.wiki 的文件，`\wi` 可以跳转到日记的索引，不过这个索引没什么用，不用管它。我只需要在写博客的时候用`\w\w` 写当天的日记，然后通过一个脚本根据日记文件的内容生成 wiki 的主页面，也就是 `\ww` 所在的页面，再生成 html ，把它发布到主机上，或者提交到 [github](https://github.com/leiqin/leiqin.github.com)  上就万事大吉。
 
+<!--more-->
+
 这就是我写的脚本：
 
-    {% highlight vim %}
-    " use vimwiki to blog
+{% highlight vim %}
+" use vimwiki to blog
 
-    " load only once 
-    if exists("g:loaded_vimwiki_blog_auto") || &cp
-        finish
-    endif
-    let g:loaded_vimwiki_blog_auto = 1
-    " 
+" load only once 
+if exists("g:loaded_vimwiki_blog_auto") || &cp
+	finish
+endif
+let g:loaded_vimwiki_blog_auto = 1
+" 
 
-    " 根据日记生成 wiki 的主页面
-    function! vimwiki#blog#BuildIndex() " 
-        let files = s:allDiaryFiles()
-        let list = ['%template index', '']
-        
-        for file in files
-            let info = s:getFileInfo(expand(file))
-            let lines = s:getIndexLines(info)
-            call extend(list, lines)
-            call add(list, '')
-        endfor
-        
-        call s:buildIndex(list)
-    endfunction " 
+" 根据日记生成 wiki 的主页面
+function! vimwiki#blog#BuildIndex() " 
+	let files = s:allDiaryFiles()
+	let list = ['%template index', '']
+	
+	for file in files
+		let info = s:getFileInfo(expand(file))
+		let lines = s:getIndexLines(info)
+		call extend(list, lines)
+		call add(list, '')
+	endfor
+	
+	call s:buildIndex(list)
+endfunction " 
 
-    " 生成 wiki 的主页面，同时也生成 html
-    function! vimwiki#blog#BuildAll() " 
-        call vimwiki#blog#BuildIndex()
-        call vimwiki#html#WikiAll2HTML(expand(VimwikiGet('path_html')))
-    endfunction " 
+" 生成 wiki 的主页面，同时也生成 html
+function! vimwiki#blog#BuildAll() " 
+	call vimwiki#blog#BuildIndex()
+	call vimwiki#html#WikiAll2HTML(expand(VimwikiGet('path_html')))
+endfunction " 
 
 
-    " 获取日记文件，并按时间先后排序，最新的排在前面
-    function! s:allDiaryFiles() " 
-        let path = expand(VimwikiGet('path'))
-        let files = split(glob(path . VimwikiGet('diary_rel_path') . "[[:digit:]]*" . VimwikiGet('ext')), '\n')
-        call sort(files)
-        call reverse(files)
-        return files
-    endfunction " 
+" 获取日记文件，并按时间先后排序，最新的排在前面
+function! s:allDiaryFiles() " 
+	let path = expand(VimwikiGet('path'))
+	let files = split(glob(path . VimwikiGet('diary_rel_path') . "[[:digit:]]*" . VimwikiGet('ext')), '\n')
+	call sort(files)
+	call reverse(files)
+	return files
+endfunction " 
 
-    " 获取日记文件的信息：
-    "   date : 日期(文件名) 
-    "   title : 标题(文件内前 5 行指定的 title，没有指定的话就是文件名)
-    function! s:getFileInfo(path) " 
-        let result = {}
-        let result.date = fnamemodify(a:path, ':t:r')
-        let result.title = result.date
+" 获取日记文件的信息：
+"   date : 日期(文件名) 
+"   title : 标题(文件内前 5 行指定的 title，没有指定的话就是文件名)
+function! s:getFileInfo(path) " 
+	let result = {}
+	let result.date = fnamemodify(a:path, ':t:r')
+	let result.title = result.date
 
-        let lines = readfile(a:path, '', 5)
-        for line in lines
-            if line =~ '^%title '
-                let result.title = strpart(line, strlen('%title '))
-                break
-            endif
-        endfor
+	let lines = readfile(a:path, '', 5)
+	for line in lines
+		if line =~ '^%title '
+			let result.title = strpart(line, strlen('%title '))
+			break
+		endif
+	endfor
 
-        return result
-    endfunction " 
+	return result
+endfunction " 
 
-    " 根据日记文件的信息生成主页面的行
-    function! s:getIndexLines(info) " 
-        let result = []
-        call add(result, "== [[" . VimwikiGet('diary_rel_path') . a:info.date . "|" . a:info.title . "]] ==")
-        call add(result, a:info.date)
-        return result
-    endfunction " 
+" 根据日记文件的信息生成主页面的行
+function! s:getIndexLines(info) " 
+	let result = []
+	call add(result, "== [[" . VimwikiGet('diary_rel_path') . a:info.date . "|" . a:info.title . "]] ==")
+	call add(result, a:info.date)
+	return result
+endfunction " 
 
-    " 将拼好的列表写入主页面
-    function! s:buildIndex(list) " 
-        let path = expand(VimwikiGet('path'))
-        let file = path . VimwikiGet('index') . VimwikiGet('ext')
-        call writefile(a:list, file)
-    endfunction " {% endhighlight %}
+" 将拼好的列表写入主页面
+function! s:buildIndex(list) " 
+	let path = expand(VimwikiGet('path'))
+	let file = path . VimwikiGet('index') . VimwikiGet('ext')
+	call writefile(a:list, file)
+endfunction " {% endhighlight %}
 
 把它放到 `~/.vim/autoload/vimwiki/blog.vim` 。
 
 然后在 `~/.vimrc` 中加入两行：
 
-    {% highlight vim %}
-    nnoremap <Leader>wbi :call vimwiki#blog#BuildIndex()<CR>
-    nnoremap <Leader>wba :call vimwiki#blog#BuildAll()<CR> {% endhighlight %}
+{% highlight vim %}
+nnoremap <Leader>wbi :call vimwiki#blog#BuildIndex()<CR>
+nnoremap <Leader>wba :call vimwiki#blog#BuildAll()<CR> 
+{% endhighlight %}
 
 用 `\w\w` 写完博客，只需要在前五行包含 `%title` ，就可以使用 `\wbi` 生成 wiki 的主页面，这时候用 `\ww` 就可以看到刚才写的文章了，再用 `\wba` 生成 html 了，发布出去就可以了。

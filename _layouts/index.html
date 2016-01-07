@@ -1,0 +1,18 @@
+<html>
+	<head>
+        {% include common_html_head.html %}
+		<style>
+			.indextitle {width: 100%; background-color: #bbbbbb;}
+		</style>
+	</head>
+	<body>
+        <div id="container">
+            {% include header.html %}
+            {% include label.html %}
+            <div id="content">
+			{{ content }}
+            </div>
+            {% include copyright.html %}
+        </div>
+	</body>
+</html>

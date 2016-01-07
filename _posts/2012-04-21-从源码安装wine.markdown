@@ -7,6 +7,8 @@ title: 从源码安装 wine
 
 wine 在 debian sid 源中的版本太低，只有 1.0 ，而 wine-unstable 的版本只有 1.1 ，而实际上 wine 的稳定版已经到了 1.4 ，而开发版已经到了 1.5 ，我决定从[源码安装 wine](http://wiki.winehq.org/GitWine) 。 
 
+<!--more-->
+
 首先下载源码：
 
     git clone git://source.winehq.org/git/wine.git ~/wine-git

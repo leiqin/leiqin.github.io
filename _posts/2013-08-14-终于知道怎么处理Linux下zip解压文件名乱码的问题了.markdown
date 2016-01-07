@@ -23,6 +23,8 @@ title: 终于知道怎么处理 Linux 下 zip 解压 文件名乱码的问题了
 
 	iconv -f cp936 -t utf8 -o output.txt input.txt
 
+<!--more-->
+
 比如，对于[这个文件](/static/other/%E6%B5%8B%E4%B8%80%E6%B5%8B.zip)输出如下：
 
 	$ LANG=C 7z x 测一测.zip 

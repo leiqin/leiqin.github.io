@@ -23,6 +23,8 @@ git 的配置可以是全局的，也可以根据不同的仓库进行配置，�
 
 如果需要根据不同的 remote 使用不同的代理，可以使用 remote.\<name\>.proxy
 
+<!--more-->
+
 ### SSH 协议
 
 修改 ssh 的配置文件 .ssh/config
