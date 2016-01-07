@@ -173,3 +173,13 @@ a.index:hover {
 .button-link:hover {
 	background: #b9b9b9;
 }
+
+.index-title {
+	width: 100%; 
+}
+
+.index-article {
+	background: #eeeeee;
+	margin: 2em 0em;
+	padding: 1em 1em;
+}

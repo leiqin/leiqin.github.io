@@ -2,13 +2,20 @@
 layout: index
 ---
 {% for post in paginator.posts %}
-<div>
-<h2 class="indextitle" ><a class="index" href="{{ post.url }}">{{ post.title }}</a></h2>
+<div class="index-article">
+<h2 class="index-title" ><a class="index" href="{{ post.url }}">{{ post.title }}</a></h2>
 {{ post.date | date: "%Y-%m-%d"}}
 {{ post.excerpt }}
+
+{% capture other_content %}{{ post.content | remove:post.excerpt | remove: '<!--more-->' }}{% endcapture %}
+
+{% if other_content.size > 10 %} 
+<div style="height:2em">
+<a class="right button-link" href="{{ post.url }}">继续阅读</a>
+</div>
+{% endif %}
 </div>
 {% endfor %}
-<div style="float:clear" ></div>
 <div style="margin-top:1em">
 <div style="display:inline">
 <a class="button-link" href="/all.html">All</a>
