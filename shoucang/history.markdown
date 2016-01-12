@@ -52,6 +52,9 @@ title: 以史为镜
 [延安日記](http://book.douban.com/subject/5381811/) 彼得‧弗拉基米洛夫
 :	共产国际代表记录 1942-1945 年的延安 日记形式，有些琐碎
 
+[罗马帝国衰亡史](http://book.douban.com/subject/1211052/)(D. M. 洛节编本) 爱德华·吉本
+:	罗马帝国千年历史的简介 (PS:宗教的部分被我略过了)
+
 ### [Coursera 公开课](https://www.coursera.org/)
 
 [中國古代歷史與人物－－秦始皇](https://www.coursera.org/course/chinesehistory) 台湾大学 吕世浩
