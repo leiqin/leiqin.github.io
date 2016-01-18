@@ -55,6 +55,9 @@ title: 以史为镜
 [罗马帝国衰亡史](http://book.douban.com/subject/1211052/)(D. M. 洛节编本) 爱德华·吉本
 :	罗马帝国千年历史的简介 (PS:宗教的部分被我略过了)
 
+[中国的内战](http://book.douban.com/subject/25904820/)(1945-1949年的政治斗争) 胡素珊
+:	从非军事的角度探讨国共内战的成与败
+
 ### [Coursera 公开课](https://www.coursera.org/)
 
 [中國古代歷史與人物－－秦始皇](https://www.coursera.org/course/chinesehistory) 台湾大学 吕世浩
