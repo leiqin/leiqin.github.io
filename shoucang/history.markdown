@@ -58,6 +58,9 @@ title: 以史为镜
 [中国的内战](http://book.douban.com/subject/25904820/)(1945-1949年的政治斗争) 胡素珊
 :	从非军事的角度探讨国共内战的成与败
 
+[香港簡史](http://book.douban.com/subject/24855510/) 高馬可
+:	從殖民地至特別行政區香港历史的简介 浅明易懂、趣味盎然
+
 ### [Coursera 公开课](https://www.coursera.org/)
 
 [中國古代歷史與人物－－秦始皇](https://www.coursera.org/course/chinesehistory) 台湾大学 吕世浩
