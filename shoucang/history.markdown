@@ -123,6 +123,9 @@ NHK纪录片：年轻人的“反叛” 香港占中75天
 [123募投人](https://www.youtube.com/playlist?list=PLwItru4bLdHw_5CrKKgPHxopRdLc-hoXO) Taiwan Bar
 :	简单有趣的台湾政治结构简介
 
+[腾讯文化大家讲堂第一季](http://v.qq.com/detail/2/29981.html)(中国思想史) 秦晖
+:	秦晖讲中国思想史，从诸子百家到新文化运动
+
 ### 网络文章
 
 豆瓣影评：[斯巴达历史扫盲贴](http://movie.douban.com/review/1139082/)
