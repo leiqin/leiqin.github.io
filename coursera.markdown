@@ -7,9 +7,9 @@ title: 关于
 
 <a href="https://www.coursera.org/account/accomplishments/specialization/MNS8P9EVVK57"><img src="./static/mooc/Data Science.png"/></a>
 
-[Machine Learning](https://www.coursera.org/learn/machine-learning/home/info)
+[Machine Learning](https://www.coursera.org/learn/machine-learning)
 
-<a href="./static/mooc/Coursera ml 2015.pdf"><img src="./static/mooc/Machine Learning.png"/></a>
+<a href="https://www.coursera.org/account/accomplishments/records/4R32KK6SJHEP"><img src="./static/mooc/Machine Learning.png"/></a>
 
 [機器學習基石](https://www.coursera.org/course/ntumlone)
 
