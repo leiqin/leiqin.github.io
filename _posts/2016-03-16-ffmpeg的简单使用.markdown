@@ -1,0 +1,237 @@
+---
+layout: post
+title: ffmpeg 的简单使用
+---
+
+[ffmpeg](https://ffmpeg.org/) 是一个视频处理工具，它功能强大、参数众多，大部分我都不知道是干什么用的 `(^_^)` ，我只是了解我用过的那些而已。
+
+查看视频信息：
+
+	{% highlight bash %}
+	ffprobe <input_video>
+	{% endhighlight %}
+
+视频压制（libx264 是 h264 编码的 encoder）：
+
+	{% highlight bash %}
+	ffmpeg -i <input_video> -codec:video libx264 -codec:audio copy <output_video>
+	{% endhighlight %}
+
+默认使用 crf 的方式压制视频，还有一种是 2pass 的方式
+
+* crf 指定视频的品质，程序会生成尽可能小的文件
+* 2pass 指定文件的大小（通过比特率），程序会生成尽可能高的视频品质
+
+通过 crf 指定视频的品质，默认值为 23，取值范围为 0-51，值越小品质越高，0 为无损，取值为 18 时几乎是肉眼无损压制。
+
+2pass 的介绍可以参考 [wiki:Encode/H.264](https://trac.ffmpeg.org/wiki/Encode/H.264)，通过文件大小算出比特率，减去音频的比特率得到视频的比特率，指定比特率进行 2pass 压制，可以得到预期大小的文件。
+
+<!--more-->
+
+视频压制并缩放成 720p（-1 会自动计算）：
+
+	{% highlight bash %}
+	ffmpeg -i <input_video> -codec:video libx264 -codec:audio copy -filter:video 'scale=-1:720' <output_video>
+	{% endhighlight %}
+
+将视频尺寸缩小一倍（iw 表示 input\_width，相应的 ih 表示 input\_high）：
+
+	{% highlight bash %}
+	ffmpeg -i <input_video> -c:v libx264 -c:a copy -filter:v 'scale=iw/2:-1' <output_video>
+	{% endhighlight %}
+
+指定 crf 和 preset：
+
+	{% highlight bash %}
+	ffmpeg -i <input_video> -c:v libx264 -c:a copy -crf 23 -preset medium <output_video>
+	{% endhighlight %}
+
+preset 是指压缩比率，可选值由快到慢：ultrafast, superfast, veryfast, faster, fast, medium, slow, slower, veryslow, placedo，默认为 medium
+
+速度越快，压缩比率越低，文件越大，相同文件大小的视频比特率越低。
+
+视频合并 [concat demuxer](https://ffmpeg.org/ffmpeg-all.html#concat-1)，视频必须是相同格式：
+
+	{% highlight bash %}
+	ffmpeg -f concat -i <input_video_list.txt> -codec copy <output_video>
+	{% endhighlight %}
+
+可以边合并边压制：
+
+	{% highlight bash %}
+	ffmpeg -f concat -i <input_video_list.txt> -c:v libx264 -c:a copy <output_video>
+	{% endhighlight %}
+
+`input_video_list.txt` 格式：
+
+	file 'input_video1'
+	file 'input_video2'
+
+文件内待合并的 `video_file` 相对路径是相对于于此 `input_video_list.txt` 文件的，而不是相对于执行 `ffmpeg` 命令的目录
+
+不同格式的视频合并可以：
+
+* 转换成相同的格式，然后用 [concat demuxer](https://ffmpeg.org/ffmpeg-all.html#concat-1)
+* 转换成 mpeg 格式，然后用 [concat protocol](https://ffmpeg.org/ffmpeg-all.html#concat-2)，参考 [Concatenating using the concat protocol (file level)](https://ffmpeg.org/faq.html#Concatenating-using-the-concat-protocol-_0028file-level_0029)
+* 使用 [concat multimedia filter](https://ffmpeg.org/ffmpeg-all.html#concat-3)
+
+也可以参考这篇文章：[FFMpeg无损合并视频的多种方法](http://www.lxway.com/949640214.htm)
+
+视频分割，取前10秒：
+
+	{% highlight bash %}
+	ffmpeg -i <input_video> -ss 0 -t 10 -codec copy <output_video>
+	{% endhighlight %}
+
+取 10-20 秒：
+
+	{% highlight bash %}
+	ffmpeg -i <input_video> -ss 10 -t 10 -c copy <output_video>
+	{% endhighlight %}
+
+修改音频的比特率（audio bitrate）：
+
+	{% highlight bash %}
+	ffmpeg -i <input_video> -c:v copy -c:a aac -b:audio 128k <output_video>
+	{% endhighlight %}
+
+增大音量：
+
+	{% highlight bash %}
+	ffmpeg -i <input_video> -c:v copy -c:a aac -b:a 192k -filter:audio 'volume=1.5' <output_video>
+	{% endhighlight %}
+
+从 mp4 中抽取 aac 音频（-vn 表示不处理视频，相应的 -an 表示不处理音频）：
+
+	{% highlight bash %}
+	ffmpeg -i <input_video> -vn -c:a copy <output_video.m4a>
+	{% endhighlight %}
+
+抽取音频并转换成 mp3：
+
+	{% highlight bash %}
+	ffmpeg -i <input_video> -vn -c:a mp3 -b:a 192k <output_video.mp3>
+	{% endhighlight %}
+
+这是我写的一个用于合并、压制视频的脚本 videojoin，使用 [concat demuxer](https://ffmpeg.org/ffmpeg-all.html#concat-1) 方式进行合并
+
+{% highlight bash %}
+#!/bin/bash
+
+DEFAULT_OUTPUT=output.mp4
+DEFAULT_CRF=23
+DEFAULT_PRESET=medium
+
+function usage(){
+printf "使用方法：\n"
+printf "        `basename $0` [-o output] [-n] [-c crf] [-p preset] [-s scale] inputfile...\n\n"
+printf "说明：\n"
+printf "        -o outputfile 输出文件，默认 $DEFAULT_OUTPUT\n"
+printf "        -n no compress，不用 libx264 进行转换压制，直接用 -codec copy 合并视频，-c -p -s 参数均忽略\n"
+printf "        -c 视频质量，libx264 参数 crf，0-51 越小质量越高，默认 $DEFAULT_CRF\n"
+printf "        -p 压缩比率，libx264 参数 preset，比如：ultrafast veryfast fast medium slow veryslow，默认 $DEFAULT_PRESET\n"
+printf "        -s 视频缩放，libx264 video filter 参数 -filter:video 'scale=-1:720'，比如：'-1:720'，-1 会自动计算，默认不做缩放\n"
+printf "        -h 显示此帮助信息\n"
+printf "        inputfile 需要合并或压制的视频\n\n"
+printf "See Also：\n"
+printf "        https://trac.ffmpeg.org/wiki/Encode/H.264\n"
+}
+
+nocompress=false
+crf=$DEFAULT_CRF
+preset=$DEFAULT_PRESET
+output=$DEFAULT_OUTPUT
+scale=
+
+while getopts :o:nc:p:s:h opt
+do
+    case $opt in
+        o)
+            output=$OPTARG
+            ;;
+        c)
+            crf=$OPTARG
+            ;;
+        p)
+            preset=$OPTARG
+            ;;
+        s)
+            scale=$OPTARG
+            ;;
+        n)
+			nocompress=true
+            ;;
+        h)
+			usage
+			exit 0
+            ;;
+        ?)
+			usage
+			exit 1
+            ;;
+    esac
+done
+
+shift $((OPTIND -1))
+
+# no input_video
+if [ $# -lt 1 ];then
+	usage
+	exit 0
+fi
+
+# one input_video
+if [ $# -eq 1 ];then
+	if [ "$nocompress" = "true" ];then
+		usage
+	else
+		if [ -z "$scale" ];then
+			ffmpeg -i "$1" -codec:video libx264 -codec:audio copy -preset "$preset" -crf "$crf" "$output"
+		else
+			ffmpeg -i "$1" -codec:video libx264 -codec:audio copy -preset "$preset" -crf "$crf" -filter:video "scale=$scale" "$output"
+		fi
+	fi
+	exit $?
+fi
+
+# many input_vides
+
+t=$(tempfile -d `pwd`) || exit
+trap "rm -f -- '$t'" EXIT
+
+for f in "$@"
+do
+	ef=`echo -n $f | sed "s/'/'\\\\\\\\''/g"`
+	echo "file '$ef'" >>"$t"
+done
+
+if [ "$nocompress" = "true" ];then
+	ffmpeg -f concat -i "$t" -codec copy "$output"
+else
+	if [ -z "$scale" ];then
+		ffmpeg -f concat -i "$t" -codec:video libx264 -codec:audio copy -preset "$preset" -crf "$crf" "$output"
+	else
+		ffmpeg -f concat -i "$t" -codec:video libx264 -codec:audio copy -preset "$preset" -crf "$crf" -filter:video "scale=$scale" "$output"
+	fi
+fi
+exit $?
+{% endhighlight %}
+
+压制单个视频：
+
+{% highlight bash %}
+videojoin input_video.mp4
+{% endhighlight %}
+
+压制并合并多个视频：
+
+{% highlight bash %}
+videojoin input_video1.mp4 input_video2.mp4 input_video3.mp4
+{% endhighlight %}
+
+合并多个视频但不进行压制：
+
+{% highlight bash %}
+videojoin -n input_video1.mp4 input_video2.mp4 input_video3.mp4
+{% endhighlight %}
+
