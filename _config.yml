@@ -1,7 +1,12 @@
 safe: true
 lsi: false
-hightlighter: pygments
+#hightlighter: pygments
 permalink: /:year/:month/:day/:title.html
 paginate: 10
-markdown: kramdown
+#markdown: kramdown
+kramdown:
+    input: GFM
 excerpt_separator: <!--more-->
+gems: 
+    - jekyll-paginate
+

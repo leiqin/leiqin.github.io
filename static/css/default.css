@@ -50,6 +50,10 @@ dd {
 	text-indent: 2em;
 }
 
+figure {
+	margin: 0;
+}
+
 .right { float: right; }
 .justcenter { text-align: center; }
 

@@ -7,15 +7,15 @@ title: ffmpeg 的简单使用
 
 查看视频信息：
 
-	{% highlight bash %}
-	ffprobe <input_video>
-	{% endhighlight %}
+{% highlight bash %}
+ffprobe <input_video>
+{% endhighlight %}
 
 视频压制（libx264 是 h264 编码的 encoder）：
 
-	{% highlight bash %}
-	ffmpeg -i <input_video> -codec:video libx264 -codec:audio copy <output_video>
-	{% endhighlight %}
+{% highlight bash %}
+ffmpeg -i <input_video> -codec:video libx264 -codec:audio copy <output_video>
+{% endhighlight %}
 
 默认使用 crf 的方式压制视频，还有一种是 2pass 的方式
 
@@ -30,21 +30,21 @@ title: ffmpeg 的简单使用
 
 视频压制并缩放成 720p（-1 会自动计算）：
 
-	{% highlight bash %}
-	ffmpeg -i <input_video> -codec:video libx264 -codec:audio copy -filter:video 'scale=-1:720' <output_video>
-	{% endhighlight %}
+{% highlight bash %}
+ffmpeg -i <input_video> -codec:video libx264 -codec:audio copy -filter:video 'scale=-1:720' <output_video>
+{% endhighlight %}
 
 将视频尺寸缩小一倍（iw 表示 input\_width，相应的 ih 表示 input\_high）：
 
-	{% highlight bash %}
-	ffmpeg -i <input_video> -c:v libx264 -c:a copy -filter:v 'scale=iw/2:-1' <output_video>
-	{% endhighlight %}
+{% highlight bash %}
+ffmpeg -i <input_video> -c:v libx264 -c:a copy -filter:v 'scale=iw/2:-1' <output_video>
+{% endhighlight %}
 
 指定 crf 和 preset：
 
-	{% highlight bash %}
-	ffmpeg -i <input_video> -c:v libx264 -c:a copy -crf 23 -preset medium <output_video>
-	{% endhighlight %}
+{% highlight bash %}
+ffmpeg -i <input_video> -c:v libx264 -c:a copy -crf 23 -preset medium <output_video>
+{% endhighlight %}
 
 preset 是指压缩比率，可选值由快到慢：ultrafast, superfast, veryfast, faster, fast, medium, slow, slower, veryslow, placedo，默认为 medium
 
@@ -52,15 +52,15 @@ preset 是指压缩比率，可选值由快到慢：ultrafast, superfast, veryfa
 
 视频合并 [concat demuxer](https://ffmpeg.org/ffmpeg-all.html#concat-1)，视频必须是相同格式：
 
-	{% highlight bash %}
-	ffmpeg -f concat -i <input_video_list.txt> -codec copy <output_video>
-	{% endhighlight %}
+{% highlight bash %}
+ffmpeg -f concat -i <input_video_list.txt> -codec copy <output_video>
+{% endhighlight %}
 
 可以边合并边压制：
 
-	{% highlight bash %}
-	ffmpeg -f concat -i <input_video_list.txt> -c:v libx264 -c:a copy <output_video>
-	{% endhighlight %}
+{% highlight bash %}
+ffmpeg -f concat -i <input_video_list.txt> -c:v libx264 -c:a copy <output_video>
+{% endhighlight %}
 
 `input_video_list.txt` 格式：
 
@@ -79,39 +79,39 @@ preset 是指压缩比率，可选值由快到慢：ultrafast, superfast, veryfa
 
 视频分割，取前10秒：
 
-	{% highlight bash %}
-	ffmpeg -i <input_video> -ss 0 -t 10 -codec copy <output_video>
-	{% endhighlight %}
+{% highlight bash %}
+ffmpeg -i <input_video> -ss 0 -t 10 -codec copy <output_video>
+{% endhighlight %}
 
 取 10-20 秒：
 
-	{% highlight bash %}
-	ffmpeg -i <input_video> -ss 10 -t 10 -c copy <output_video>
-	{% endhighlight %}
+{% highlight bash %}
+ffmpeg -i <input_video> -ss 10 -t 10 -c copy <output_video>
+{% endhighlight %}
 
 修改音频的比特率（audio bitrate）：
 
-	{% highlight bash %}
-	ffmpeg -i <input_video> -c:v copy -c:a aac -b:audio 128k <output_video>
-	{% endhighlight %}
+{% highlight bash %}
+ffmpeg -i <input_video> -c:v copy -c:a aac -b:audio 128k <output_video>
+{% endhighlight %}
 
 增大音量：
 
-	{% highlight bash %}
-	ffmpeg -i <input_video> -c:v copy -c:a aac -b:a 192k -filter:audio 'volume=1.5' <output_video>
-	{% endhighlight %}
+{% highlight bash %}
+ffmpeg -i <input_video> -c:v copy -c:a aac -b:a 192k -filter:audio 'volume=1.5' <output_video>
+{% endhighlight %}
 
 从 mp4 中抽取 aac 音频（-vn 表示不处理视频，相应的 -an 表示不处理音频）：
 
-	{% highlight bash %}
-	ffmpeg -i <input_video> -vn -c:a copy <output_video.m4a>
-	{% endhighlight %}
+{% highlight bash %}
+ffmpeg -i <input_video> -vn -c:a copy <output_video.m4a>
+{% endhighlight %}
 
 抽取音频并转换成 mp3：
 
-	{% highlight bash %}
-	ffmpeg -i <input_video> -vn -c:a mp3 -b:a 192k <output_video.mp3>
-	{% endhighlight %}
+{% highlight bash %}
+ffmpeg -i <input_video> -vn -c:a mp3 -b:a 192k <output_video.mp3>
+{% endhighlight %}
 
 这是我写的一个用于合并、压制视频的脚本 videojoin，使用 [concat demuxer](https://ffmpeg.org/ffmpeg-all.html#concat-1) 方式进行合并
 
