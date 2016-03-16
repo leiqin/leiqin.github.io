@@ -51,7 +51,11 @@ dd {
 }
 
 figure {
-	margin: 0;
+	margin: 1em 2em;
+}
+
+div .highlighter-rouge {
+	margin: 1em 2em;
 }
 
 .right { float: right; }
