@@ -50,11 +50,7 @@ dd {
 	text-indent: 2em;
 }
 
-figure.highlighter {
-	margin: 1em 2em;
-}
-
-div.highlighter-rouge {
+figure.highlight, div.highlighter-rouge {
 	margin: 1em 2em;
 }
 
