@@ -9,4 +9,4 @@ title: 收藏
 
 [启蒙读物](./enlightenment.html)
 
-[毁三观动漫](./value.html)
+[毁三观作品](./value.html)
