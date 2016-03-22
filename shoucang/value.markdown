@@ -1,6 +1,6 @@
 ---
 layout: index
-title: 毁三观动漫
+title: 毁三观作品
 ---
 
 动画 [《命运之夜前传 Fate/Zero》](http://movie.douban.com/subject/5416070/)
