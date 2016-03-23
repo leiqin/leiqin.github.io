@@ -9,5 +9,5 @@ title: 毁三观作品
 动画 [《来自新世界》](http://movie.douban.com/subject/10527275/)
 :	这是一个关于人类的故事
 
-小说 [《三体》](http://book.douban.com/subject/5363767/)
+小说 [《三体3：死神永生》](http://book.douban.com/subject/5363767/)
 :	这是一个关于人性、兽性的故事。在面对浩瀚宇宙无尽而未知的黑暗森林时，想要守护什么，可以牺牲什么，每个人都有自己的决断
