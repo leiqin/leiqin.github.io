@@ -4,7 +4,7 @@ layout: index
 {% for post in paginator.posts %}
 <div class="index-article">
 <h2 class="index-title" ><a class="index" href="{{ post.url }}">{{ post.title }}</a></h2>
-{{ post.date | date: "%Y-%m-%d"}}
+<em>{{ post.date | date: "%Y-%m-%d"}}</em>
 {{ post.excerpt }}
 
 {% capture other_content %}{{ post.content | remove:post.excerpt | remove: '<!--more-->' }}{% endcapture %}

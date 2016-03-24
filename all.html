@@ -3,7 +3,8 @@ layout: index
 ---
 {% for post in site.posts %}
 <div style="margin-bottom:1em">
-<p style="display:inline" >{{ post.date | date: "%Y-%m-%d"}}</p>
+<p style="display:inline" ><em>{{ post.date | date: "%Y-%m-%d"}}</em></p>
+&nbsp;&nbsp;
 <h4 style="display:inline" ><a class="index" href="{{ post.url }}" >{{ post.title }}</a></h4>
 </div>
 {% endfor %}

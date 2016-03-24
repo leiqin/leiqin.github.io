@@ -50,6 +50,10 @@ dd {
 	text-indent: 2em;
 }
 
+em {
+	color: #666666;
+}
+
 figure.highlight, div.highlighter-rouge {
 	margin: 1em 2em;
 }
