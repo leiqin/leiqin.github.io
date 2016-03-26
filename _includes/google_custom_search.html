@@ -7,6 +7,9 @@
     </form>
 	<script>
 		$(document).ready(function(){
+			if (! window.location.hostname.contains('leiqin')){
+			    return;
+			}
 			$("#googlecustomsearchjavascript").prop('src', "http://www.google.com/coop/cse/brand?form=cse-search-box&lang=zh_CN");
 			$("#googlecustomsearchjavascript").prop('type', "text/javascript");
 		});
