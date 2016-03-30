@@ -98,6 +98,11 @@ title: 以史为镜
 [耶鲁大学公开课：中世纪早期史](http://open.163.com/special/opencourse/earlymiddleages.html) Paul Freedman
 :	从罗马帝国后期到公元1000年左右，基督教和伊斯兰教在这个时期崛起。
 
+### [超星学术视频](http://video.chaoxing.com/)
+
+[秦汉史](http://mooc.chaoxing.com/course/1122947.html) 秦晖
+:	秦晖讲秦汉史
+
 ### 纪录片
 
 CNN纪录片：[冷战风云录](http://movie.douban.com/subject/1864220/)
