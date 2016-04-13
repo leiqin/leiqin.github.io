@@ -3,8 +3,8 @@ layout: post
 title: 读书笔记：罗马帝国衰亡史
 ---
 
-[《罗马帝国衰亡史》](http://book.douban.com/subject/1211052/)(D. M. 洛节编本) 爱德华·吉本
-[耶鲁大学公开课：中世纪早期史](http://open.163.com/special/opencourse/earlymiddleages.html) Paul Freedman
+* [《罗马帝国衰亡史》](http://book.douban.com/subject/1211052/)(D. M. 洛节编本) 爱德华·吉本
+* [耶鲁大学公开课：中世纪早期史](http://open.163.com/special/opencourse/earlymiddleages.html) Paul Freedman
 
 
 罗马疆域的扩张在共和国政府的统治时期，便已基本完成。后来的罗马皇帝绝大部分都只不过是坐享其成而已。
