@@ -17,10 +17,3 @@ title: 启蒙读物
 
 [独裁者手册](http://book.douban.com/subject/25881102/) 布鲁诺·德·梅斯奎塔 阿拉斯泰尔·史密斯
 :	政治启蒙读物
-
-[乌合之众](http://book.douban.com/subject/1012611/) 古斯塔夫.勒庞 
-:	大众心理启蒙读物
-
-[先秦诸子百家争鸣](http://book.douban.com/subject/3373947/)  易中天
-:	百家思想启蒙读物
-
