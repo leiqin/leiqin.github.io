@@ -159,6 +159,9 @@ NHK纪录片：年轻人的“反叛” 香港占中75天
 [《陳平對話錄》：沈志华](https://www.youtube.com/playlist?list=PL33C0559F7BFCE241)
 :	沈志华谈中苏关系发展
 
+[《平安乐清》对乐清钱云会事件的调查](https://youtu.be/_Q-jWmPKxzE) 艾未未
+:	2010年钱云会事件，以及浙江温州乐清寨桥村农民的状况
+
 ### 网络文章
 
 豆瓣影评：[斯巴达历史扫盲贴](http://movie.douban.com/review/1139082/)
