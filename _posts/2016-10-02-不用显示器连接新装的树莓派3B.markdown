@@ -1,0 +1,67 @@
+---
+layout: post
+title: 不用显示器连接新装的树莓派3B
+---
+
+首先需要有树莓派、电源 和 TF卡(micro-SD)，系统卡的制作方法参考官方文档：[installing-images > linux](https://www.raspberrypi.org/documentation/installation/installing-images/linux.md)，下载[官方镜像](https://www.raspberrypi.org/downloads/raspbian/) `dd` 进去就好了。
+
+不用显示器连接新装的树莓派3B有两种方法：
+
+* 修改配置文件，指定 ip，用网线连接
+* 修改配置文件启用 uart（[Pi3 UART stopped working? Read this.](https://www.raspberrypi.org/forums/viewtopic.php?f=28&t=141195)），用串口连接
+
+<!--more-->
+
+### 方法一：使用网线
+
+参考：[Connecting the the Raspberry PI Without a Monitor (Headless) ](https://youtu.be/Ioih6MHNNqc)
+
+挂载树莓派系统卡的 boot 分区，打开 cmdline.txt ，在最后添加 `ip=169.254.1.1`
+
+将系统卡插入树莓派，启动树莓派，用网线将它与电脑连接，暂时关掉 NetworkManager，设置电脑网卡 ip，并连接树莓派
+
+	sudo systemctl stop NetworkManager.service
+	sudo ip addr add 169.254.1.2/16 dev enp5s0
+	ssh pi@169.254.1.1
+
+### 方法二：使用串口
+
+参考：[RPi Serial Connection](http://elinux.org/RPi_Serial_Connection)
+
+挂载树莓派系统卡的 boot 分区，打开 config.txt ，添加一行 `enable_uart=1`
+
+将 ubs转串口（usb2ttl, usb2uart）设备连接电脑，运行
+
+	dmesg | grep usb
+
+找到类似如下这行
+
+	[ 8338.835515] usbserial: USB Serial support registered for ch341-uart
+	[ 8338.837687] usb 2-1.2: ch341-uart converter now attached to ttyUSB0
+
+检查设备文件
+
+	ls -l /dev/ttyUSB0
+
+将转接器的 TXD 和 RXD 接口，检查转接器的可用性
+
+	sudo stty -F /dev/ttyUSB0
+	sudo screen /dev/ttyUSB0
+
+随便输入些什么，有回显就说明转接器是好的。按 `CTRL-A k` 退出
+
+将转接器与树莓派连接
+
+	Raspberry pi   <->   usb2ttl
+	     GND       <->     GND
+	     TXD       <->     RXD
+	     RXD       <->     TXD
+
+电源不用接，转接器的接口参考购买时的说明，树莓派A,B 的接口参考 [GPIO: Raspberry Pi Models A and B](https://www.raspberrypi.org/documentation/usage/gpio/README.md)，树莓派 A+,B+,2B,3B 的接口参考 gadgetoid's [interactive pinout diagram](http://pinout.xyz/)
+
+运行
+
+	sudo screen /dev/ttyUSB0 115200
+
+启动树莓派，就可以看见终端了。
+
