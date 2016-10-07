@@ -148,7 +148,10 @@ NHK纪录片：年轻人的“反叛” 香港占中75天
 :	2010年，网友吐槽九城和网易对魔兽世界代理权的争夺
 
 [動畫臺灣史](http://movie.douban.com/subject/26631375/) Taiwan Bar
-:	简单有趣的台湾史
+:	简单有趣的台湾近代史
+
+[臺灣世界史](http://movie.douban.com/subject/26631375/) 動畫臺灣史 第二季 Taiwan Bar
+:	简单有趣的台湾世界史
 
 [123募投人](https://www.youtube.com/playlist?list=PLwItru4bLdHw_5CrKKgPHxopRdLc-hoXO) Taiwan Bar
 :	简单有趣的台湾政治结构简介
