@@ -147,10 +147,10 @@ NHK纪录片：年轻人的“反叛” 香港占中75天
 [网瘾战争](https://zh.wikipedia.org/wiki/%E7%BD%91%E7%98%BE%E6%88%98%E4%BA%89) 网友自制
 :	2010年，网友吐槽九城和网易对魔兽世界代理权的争夺
 
-[動畫臺灣史](http://movie.douban.com/subject/26631375/) Taiwan Bar
+[動畫臺灣史](https://www.youtube.com/playlist?list=PLwItru4bLdHx3nnUrFUBFWwMHuo_4Yx9P) Taiwan Bar
 :	简单有趣的台湾近代史
 
-[臺灣世界史](http://movie.douban.com/subject/26631375/) 動畫臺灣史 第二季 Taiwan Bar
+[臺灣世界史](https://www.youtube.com/playlist?list=PLwItru4bLdHyn4asw3Bu0hNfgyP6H-XUN) 動畫臺灣史 第二季 Taiwan Bar
 :	简单有趣的台湾世界史
 
 [123募投人](https://www.youtube.com/playlist?list=PLwItru4bLdHw_5CrKKgPHxopRdLc-hoXO) Taiwan Bar
