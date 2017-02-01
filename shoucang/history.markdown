@@ -104,6 +104,9 @@ title: 以史为镜
 [一百个人的十年](https://book.douban.com/subject/25917467/) 冯骥才
 :	冯骥才讲述文革中的普通百姓。高层权斗，民间浩劫，又一个人间地狱（PS：即便是文革的年代，人们也做出了各种各样的选择，各种各样的坚持，随波逐流只不过是其中一种）
 
+[中国改革年代的政治斗争](https://plus.google.com/100074035785709567073/posts/P1x6BMChtSZ) 杨继绳
+:	杨继绳介绍文革结束后，改革开放时期江青、华国锋、邓小平、陈云、胡耀邦、赵紫阳的政治斗争
+
 ### [Coursera 公开课](https://www.coursera.org/)
 
 [中國古代歷史與人物－－秦始皇](https://www.coursera.org/course/chinesehistory) 台湾大学 吕世浩
