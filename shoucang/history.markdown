@@ -107,6 +107,9 @@ title: 以史为镜
 [中国改革年代的政治斗争](https://plus.google.com/100074035785709567073/posts/P1x6BMChtSZ) 杨继绳
 :	杨继绳介绍文革结束后，改革开放时期江青、华国锋、邓小平、陈云、胡耀邦、赵紫阳的政治斗争
 
+[第三帝国的兴亡](https://book.douban.com/subject/10435653/) 威廉·夏伊勒
+:	希特勒的成长、激进、偏执、煽动人心、残忍、孤注一掷、推卸责任	
+
 ### [Coursera 公开课](https://www.coursera.org/)
 
 [中國古代歷史與人物－－秦始皇](https://www.coursera.org/course/chinesehistory) 台湾大学 吕世浩
