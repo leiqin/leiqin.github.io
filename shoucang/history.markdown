@@ -163,6 +163,9 @@ NHK纪录片：[年轻人的“反叛” 香港占中75天](https://youtu.be/_ed
 德语纪录片 [第三次印支战争（中越边境战争）](https://youtu.be/OKJpJj_JkQ://youtu.be/Nvve7ozOJIk)
 :	德国人眼中的中越边境战争
 
+NHK纪录片：[追踪"伊斯兰国"](https://youtu.be/OM826TMPNl8)
+:	NHK在周边诸国、美国、欧洲和亚洲，采访了熟悉巴格达迪的原伊斯兰国武装分子、美国政府原高官等100多人，一些内幕浮现了出来。
+
 ### 视频
 
 [袁腾飞近现代史](https://www.youtube.com/playlist?list=PL2F3CDC5038112A9C) 袁腾飞
