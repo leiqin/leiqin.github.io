@@ -192,6 +192,9 @@ NHK纪录片：[年轻人的“反叛” 香港占中75天](https://youtu.be/_ed
 [《平安乐清》对乐清钱云会事件的调查](https://youtu.be/_Q-jWmPKxzE) 艾未未
 :	2010年钱云会事件，以及浙江温州乐清寨桥村农民的状况
 
+2011年[《基層人大選舉》](https://youtu.be/ljwky5Dtfro) [2p](https://youtu.be/nWfAH3WA_eY)
+:	2011年基层人大独立参选人
+
 ### 网络文章
 
 豆瓣影评：[斯巴达历史扫盲贴](http://movie.douban.com/review/1139082/)
