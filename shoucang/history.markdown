@@ -110,8 +110,11 @@ title: 以史为镜
 [第三帝国的兴亡](https://book.douban.com/subject/10435653/) 威廉·夏伊勒
 :	希特勒的成长、激进、偏执、煽动人心、残忍、孤注一掷、推卸责任	
 
-[光荣与梦想](https://book.douban.com/subject/26314954/)
+[光荣与梦想](https://book.douban.com/subject/26314954/) 威廉·曼彻斯特
 :	讲述从1932年胡佛、麦克阿瑟镇压[抚恤金进军事件](https://zh.wikipedia.org/wiki/%E9%85%AC%E6%81%A4%E9%87%91%E9%80%B2%E8%BB%8D%E4%BA%8B%E4%BB%B6)到1972年尼克松[水门事件](https://zh.wikipedia.org/wiki/%E6%B0%B4%E9%97%A8%E4%BA%8B%E4%BB%B6)美国政治、文化（很多传统道德观念被新一代抛弃，社会、观念、潮流急速变化）、民权（黑人民权运动有非暴力的，也有暴力的，反之支持种族隔离的运动亦然）等各方面的变迁
+
+[中国底层访谈录](https://plus.google.com/+%E7%A7%8D%E5%AD%90%E4%B9%A6%E5%9F%8E/posts/MdbhuLjD9nU) 廖亦武
+:	既真实又遥远的普通人访谈
 
 ### [Coursera 公开课](https://www.coursera.org/)
 
