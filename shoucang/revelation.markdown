@@ -346,6 +346,9 @@ title: 克雷圣经
 改变不会来于自必然的车轮，只会来自于不断的抗争
 :	纪录片 [互联网之子 The Internet's Own Boy: The Story of Aaron Swartz](https://movie.douban.com/subject/25785114/) 1:39:19
 
+挥霍之人为达利益所向只会肆意挥霍，用心之人哪怕一无所有也会处处用心
+:	视频 [中国电视剧音乐编年史2016-2017(个人向)](https://www.bilibili.com/video/av18044700/) 63:16
+
 * * *
 
 最后再附上 **龙破斩** 的咒文：
