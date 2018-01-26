@@ -349,6 +349,9 @@ title: 克雷圣经
 挥霍之人为达利益所向只会肆意挥霍，用心之人哪怕一无所有也会处处用心
 :	视频 [中国电视剧音乐编年史2016-2017(个人向)](https://www.bilibili.com/video/av18044700/) 63:16
 
+权力只对权力的来源负责
+:	图书 [《天地翻覆》](https://play.google.com/store/books/details/%E6%9D%A8%E7%BB%A7%E7%BB%B3_%E8%91%97_%E5%A4%A9%E5%9C%B0%E7%BF%BB%E8%A6%86?id=4d4qDwAAQBAJ) 第一章 文革前发生的重大事件
+
 * * *
 
 最后再附上 **龙破斩** 的咒文：
