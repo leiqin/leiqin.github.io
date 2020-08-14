@@ -377,7 +377,7 @@ title: 克雷圣经
 :	图书 [《日本人为何选择了战争》](https://book.douban.com/subject/34204669/) 第五章 太平洋战争：说不出死者阵亡地的国家 第四节 战争的种种面目 
 
 研究表明，自控能力强的人实际上只是更不需要依靠意志力来解决问题而已。他们的做法是改变自己周围的环境，减少对意志力的考验。
-:	视频 [新年立志为什么会失败，以及怎样能成功](https://www.bilibili.com/video/BV1GJ411Y7Bq) [Veritasium真理元素](https://space.bilibili.com/94742590) [Veritasium](https://www.youtube.com/channel/UCHnyfMqiRRG1u-2MsSQLbXA) 
+:	视频 [《新年立志为什么会失败，以及怎样能成功》](https://www.bilibili.com/video/BV1GJ411Y7Bq) [Veritasium真理元素](https://space.bilibili.com/94742590) [Veritasium](https://www.youtube.com/channel/UCHnyfMqiRRG1u-2MsSQLbXA) 
 
 * * *
 
