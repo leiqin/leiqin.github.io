@@ -388,6 +388,9 @@ title: 克雷圣经
 在缺乏地方社会对于国家机构的制约力量的情况下，希望国家机构能够以公平和自制的态度来对待公民，只能是为专制权力开放通道。
 :	图书 [《中国现代国家的起源》](https://book.douban.com/subject/25750468/) 孔飞力 第四章 19-20世纪中国现代国家的演进
 
+不要让完美成为好的敌人
+:	TED演讲 [Can we solve global warming? Lessons from how we protected the ozone layer | Sean Davis](https://youtu.be/08z_xW-szwM) 8:44 don't let the prefect be the enemy of the good.
+
 * * *
 
 最后再附上 **龙破斩** 的咒文：
