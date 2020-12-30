@@ -391,6 +391,9 @@ title: 克雷圣经
 不要让完美成为好的敌人
 :	TED演讲 [Can we solve global warming? Lessons from how we protected the ozone layer | Sean Davis](https://youtu.be/08z_xW-szwM) 8:44 don't let the prefect be the enemy of the good.
 
+学术自由与否从来都不是一个良心的问题，从来都是一个自主的问题，讲的简单点就是：是不是有人不准你说话，至于你说话的动机是什么没有关系。
+:	视频 [秦晖：“文明冲突”、“修氏陷阱”还是“新冷战”？](https://youtu.be/UMjnFLq0j48) 1:31:05 学术自由、思想自由的一个原则是就问题谈问题，不去追问你的动机。 西方的言论者有各种各样的动机，中国也是一样，但是学术自由本身是一个言论控制与否的问题。
+
 * * *
 
 最后再附上 **龙破斩** 的咒文：
