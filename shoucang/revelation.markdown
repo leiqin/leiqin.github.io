@@ -389,7 +389,7 @@ title: 克雷圣经
 :	图书 [《中国现代国家的起源》](https://book.douban.com/subject/25750468/) 孔飞力 第四章 19-20世纪中国现代国家的演进
 
 不要让完美成为好的敌人
-:	TED演讲 [Can we solve global warming? Lessons from how we protected the ozone layer | Sean Davis](https://youtu.be/08z_xW-szwM) 8:44 don't let the prefect be the enemy of the good.
+:	TED演讲 [Can we solve global warming? Lessons from how we protected the ozone layer Sean Davis](https://youtu.be/08z_xW-szwM) 8:44 don't let the prefect be the enemy of the good.
 
 学术自由与否从来都不是一个良心的问题，从来都是一个自主的问题，讲的简单点就是：是不是有人不准你说话，至于你说话的动机是什么没有关系。
 :	视频 [秦晖：“文明冲突”、“修氏陷阱”还是“新冷战”？](https://youtu.be/UMjnFLq0j48) 1:31:05 学术自由、思想自由的一个原则是就问题谈问题，不去追问你的动机。 西方的言论者有各种各样的动机，中国也是一样，但是学术自由本身是一个言论控制与否的问题。
