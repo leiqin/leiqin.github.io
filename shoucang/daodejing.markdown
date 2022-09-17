@@ -3,7 +3,7 @@ layout: headercenter
 title: 道德经
 ---
 
-修改自：[马王堆出土帛书版《道德经》全文](https://www.bilibili.com/read/cv13996552) 和 [《帛书老子校注》](https://book.douban.com/subject/34969860/)
+引用自：[马王堆出土帛书版《道德经》全文](https://www.bilibili.com/read/cv13996552) 和 [《帛书老子校注》](https://book.douban.com/subject/34969860/)
 
 ###### 今本德经 第三十八章
 
