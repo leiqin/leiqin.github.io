@@ -1,5 +1,6 @@
 safe: true
 lsi: false
+future: true
 #hightlighter: pygments
 permalink: /:year/:month/:day/:title.html
 paginate: 10
@@ -7,6 +8,6 @@ paginate: 10
 kramdown:
     input: GFM
 excerpt_separator: <!--more-->
-gems: 
+plugins: 
     - jekyll-paginate
 
