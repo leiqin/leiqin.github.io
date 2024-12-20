@@ -16,8 +16,12 @@
 			var arr = Array();
 			$(data).find('dt').each(function(){
 				arr[arr.length] = $(this).text()
-			})
-			$('#revelation').text(arr[Math.floor(Math.random()*arr.length)])
+			});
+			$('#revelation').text(arr[Math.floor(Math.random()*arr.length)]);
+            $('#header-title').on('click', function(event) {
+                $('#revelation').text(arr[Math.floor(Math.random()*arr.length)])
+            });
+            $('#header-title a').attr('href', '#');
 		});
 	});
 </script>
