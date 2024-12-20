@@ -12,3 +12,5 @@ title: 收藏
 [哲学入门](./philosophy.html)
 
 [毁三观作品](./value.html)
+
+[道德经](./daodejing.html)
