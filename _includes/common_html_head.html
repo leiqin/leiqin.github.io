@@ -16,12 +16,31 @@
 		'/shoucang/revelation.html',
 		function(data){
 			var arr = Array();
+            var commons = Array();
 			$(data).find('dt').each(function(){
 				arr[arr.length] = $(this).text()
 			});
-			$('#revelation').text(arr[Math.floor(Math.random()*arr.length)]);
+			$(data).find('dd').each(function(){
+				commons[commons.length] = $(this).text()
+			});
+            var r = $('#revelation');
+            var rc = $('#revelation-common').hide();
+
+            r
+                .css('cursor', 'pointer')
+                .on('click', function(event) {
+                    rc.css('display') == 'none' ? rc.show() : rc.hide();
+                });
+
+            function change_revelation() {
+                var i = Math.floor(Math.random()*arr.length)
+                rc.hide();
+                rc.text(commons[i]);
+                r.text(arr[i])
+            }
+            change_revelation()
             $('#header-title').on('click', function(event) {
-                $('#revelation').text(arr[Math.floor(Math.random()*arr.length)])
+                change_revelation()
             });
             $('#header-title a').attr('href', '#');
 		});

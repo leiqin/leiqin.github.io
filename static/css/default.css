@@ -126,6 +126,16 @@ code.highlighter-rouge {
     background: #dddddd
 }
 
+#revelation-common {
+    display: none;
+    padding: 0.5em;
+    border: 1px solid #8cacbb;
+    color: black;
+    background-color: #f0f0f0;
+    margin-left: 2em; 
+	text-indent: 2em;
+}
+
 a.index {
     color: #222222;
 }
